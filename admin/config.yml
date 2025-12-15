@@ -16,11 +16,14 @@ collections:
         label: "Datos del CV"
         name: "site"
         fields:
+
+          # ---- Datos personales ----
           - { label: "Nombre", name: "name", widget: "string" }
           - { label: "Rol", name: "role", widget: "string" }
           - { label: "Ubicacion", name: "location", widget: "string" }
           - { label: "Linea de enfoque", name: "stackLine", widget: "string" }
 
+          # ---- Links ----
           - label: "Links"
             name: "links"
             widget: "object"
@@ -29,6 +32,7 @@ collections:
               - { label: "GitHub", name: "github", widget: "string" }
               - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
 
+          # ---- Hero ----
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -41,3 +45,38 @@ collections:
                 widget: "list"
                 field: { label: "Tag", name: "tag", widget: "string" }
 
+          # ---- Habilidades ----
+          - label: "Habilidades"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+
+          # ---- Experiencia ----
+          - label: "Experiencia"
+            name: "experience"
+            widget: "list"
+            fields:
+              - { label: "Puesto", name: "position", widget: "string" }
+              - { label: "Empresa", name: "company", widget: "string" }
+              - { label: "Periodo", name: "period", widget: "string" }
+              - label: "Funciones"
+                name: "bullets"
+                widget: "list"
+                field: { label: "Descripcion", name: "bullet", widget: "string" }
+
+          # ---- Proyectos ----
+          - label: "Proyectos"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Tipo", name: "type", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "text" }
+              - { label: "Demo", name: "demo", widget: "string", required: false }
+              - { label: "Repositorio", name: "repo", widget: "string", required: false }
