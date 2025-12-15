@@ -2,17 +2,17 @@
   "brandName": "MartinMilev.dev",
   "name": "Martin Milev Venelinova",
   "role": "Tecnico de Sistemas y Soporte Avanzado | Windows / AD / BBDD",
-  "location": "Madrid, Espana",
-  "stackLine": "Windows • Active Directory • O365 • SQL • Redes • Documentacion tecnica",
+  "location": "Madrid, España",
+  "stackLine": "Windows, Active Directory, O365, SQL, Redes, Documentacion tecnica",
   "links": {
     "email": "martin.milev.vene@gmail.com",
     "github": "https://github.com/MartinMilevVenelinova",
-    "linkedin": ""
+    "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
   },
   "hero": {
     "badge": "100% remoto · Disponibilidad geografica y horaria",
     "title": "Sistemas, soporte avanzado y bases de datos",
-    "subtitle": "Experiencia en entornos corporativos criticos: incidencias complejas, administracion de usuarios/permisos y soporte remoto. Formacion en SMR, DAM y Master en Big Data e IA.",
+    "subtitle": "Trabajo en entornos corporativos criticos resolviendo incidencias complejas, gestionando usuarios/permisos y dando soporte remoto. Vengo de SMR y DAM, y estoy con Master en Big Data e IA.",
     "tags": [
       "Windows / Active Directory",
       "Office 365 / MFA",
@@ -25,68 +25,32 @@
     {
       "title": "Sistemas & Administracion",
       "description": "Gestion de usuarios, accesos y soporte en entorno corporativo.",
-      "items": [
-        "Active Directory",
-        "Office 365",
-        "Azure (permisos)",
-        "Soporte remoto",
-        "Gestion de accesos"
-      ]
+      "items": ["Active Directory", "Office 365", "Azure (permisos)", "Soporte remoto", "Gestion de accesos"]
     },
     {
       "title": "Redes & Conectividad",
       "description": "Soporte en conectividad, configuracion y diagnostico.",
-      "items": [
-        "VPN",
-        "DNS",
-        "Proxy",
-        "IP fija/variable",
-        "Impresoras/Escaneres"
-      ]
+      "items": ["VPN", "DNS", "Proxy", "IP fija/variable", "Impresoras/Escaneres"]
     },
     {
       "title": "Bases de datos",
-      "description": "Conocimientos y experiencia con BBDD relacionales y NoSQL.",
-      "items": [
-        "MySQL",
-        "PostgreSQL",
-        "MongoDB",
-        "SQL (general)"
-      ]
+      "description": "BBDD relacionales y NoSQL para consultas, soporte y reporting.",
+      "items": ["MySQL", "PostgreSQL", "MongoDB", "SQL (general)"]
     },
     {
       "title": "Incidencias & Operativa",
       "description": "Ticketing, escalado, calidad de servicio y reporting.",
-      "items": [
-        "FARO",
-        "Escalado N2/N3",
-        "Odigo (calidad)",
-        "Power BI",
-        "PowerPoint"
-      ]
+      "items": ["FARO", "Escalado N2/N3", "Odigo (calidad)", "Power BI", "PowerPoint"]
     },
     {
       "title": "Desarrollo (plus)",
-      "description": "Background en desarrollo full-stack y APIs.",
-      "items": [
-        "Java",
-        "Spring Boot",
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "APIs REST"
-      ]
+      "description": "Tengo base en desarrollo full-stack y APIs.",
+      "items": ["Java", "Spring Boot", "HTML", "CSS", "Bootstrap", "APIs REST"]
     },
     {
       "title": "Herramientas (plus)",
-      "description": "Herramientas usadas en el dia a dia.",
-      "items": [
-        "Jenkins (operativa O365)",
-        "Excel (analisis)",
-        "Consultas SQL (reporting)",
-        "Nagios",
-        "FileZilla"
-      ]
+      "description": "Herramientas que he usado en proyectos y operativa diaria.",
+      "items": ["Jenkins (operativa O365)", "Excel (analisis)", "Consultas SQL (reporting)", "Nagios", "FileZilla"]
     }
   ],
   "experience": [
@@ -95,8 +59,8 @@
       "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
       "period": "Dic 2024 – Actualidad",
       "bullets": [
-        "Soporte remoto especializado a usuarios VIP (letrados, magistrados, jueces y fiscales) con atencion exclusiva.",
-        "Administracion de usuarios y permisos, desbloqueos y accesos a aplicativos por perfiles (gestor, responsable, etc.).",
+        "Doy soporte remoto especializado a usuarios VIP (letrados, magistrados, jueces y fiscales) con atencion exclusiva.",
+        "Administro usuarios y permisos, desbloqueos y accesos a aplicativos por perfiles (gestor, responsable, etc.).",
         "Soporte integral de puesto: impresoras, multifunciones, escaneres, carpetas compartidas y aplicaciones corporativas.",
         "Soporte de VPN y teletrabajo, incidencias de correo y autenticacion.",
         "Soporte a Bomberos: sistemas SITREM y APPB, incidencias en parques (caidas de red, ethernet, proxy, subredes), telefonia movil y sistemas de sirenas."
@@ -107,11 +71,11 @@
       "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
       "period": "2025 – Actualidad",
       "bullets": [
-        "Coordinacion operativa de un equipo de 11 agentes: reparto de tareas, apoyo y seguimiento.",
-        "Escucha y valoracion de llamadas en Odigo, control de calidad y propuestas de mejora.",
-        "Informes y estadisticas del servicio con Power BI y presentaciones en PowerPoint.",
-        "Analisis de grandes volumenes de datos de ticketing (FARO), incluyendo comparativas y limpieza de datos.",
-        "Uso de consultas SQL por cuenta propia para agilizar reporting y sacar indicadores."
+        "Coordino la operativa de un equipo de 11 agentes: reparto de tareas, apoyo y seguimiento.",
+        "Hago escucha y valoracion de llamadas en Odigo, control de calidad y mejoras.",
+        "Preparo informes y estadisticas del servicio con Power BI y presentaciones en PowerPoint.",
+        "Analizo grandes volumenes de datos del ticketing (FARO), comparativas y limpieza de datos.",
+        "Uso consultas SQL por cuenta propia para agilizar reporting y sacar indicadores."
       ]
     },
     {
@@ -129,12 +93,12 @@
       "company": "Logisfashion – Ontigola (operativa Inditex)",
       "period": "Jul 2021 – Feb 2023",
       "bullets": [
-        "Soporte integral de sistemas en almacen y oficinas: hardware, software y dispositivos industriales/moviles RFID.",
-        "Gestion de permisos y accesos en Azure, y uso de herramienta de ticketing corporativa.",
+        "Lleve el soporte integral de sistemas en almacen y oficinas: hardware, software y dispositivos industriales/moviles RFID.",
+        "Gestione permisos y accesos en Azure, y trabaje con herramienta de ticketing corporativa.",
         "Soporte de AS400 (entorno Tordera) y sistemas asociados a la operativa logistica.",
         "Coordinacion con Inditex en tuneles RFID y proyectos relacionados con alarmas de productos.",
-        "Asumi funciones de responsable del area IT por falta de personal: priorizacion de proyectos, autonomia total y organizacion del trabajo.",
-        "Coordinacion y formacion de nuevas incorporaciones cuando se amplio el equipo tecnico."
+        "Asumi funciones de responsable del area IT por falta de personal: priorizacion de proyectos, autonomia y organizacion del trabajo.",
+        "Coordine y forme a nuevas incorporaciones cuando se amplio el equipo tecnico."
       ]
     },
     {
@@ -142,8 +106,8 @@
       "company": "BioErgon, UEx",
       "period": "Feb 2023 – Jun 2023",
       "bullets": [
-        "Desarrollo back-end en Java/Spring Boot y front-end con HTML/CSS/Bootstrap.",
-        "Diseno y gestion de base de datos MongoDB para recopilacion de datos."
+        "Desarrolle back-end en Java/Spring Boot y front-end con HTML/CSS/Bootstrap.",
+        "Disene y gestione base de datos MongoDB para recopilacion de datos."
       ]
     }
   ],

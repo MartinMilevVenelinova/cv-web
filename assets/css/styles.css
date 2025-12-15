@@ -1,17 +1,23 @@
-:root {
+:root{
   --glass-bg: color-mix(in srgb, Canvas 85%, transparent);
   --badge-bg-light: #f1f3f5;
   --badge-text-light: #212529;
+  --panel-border: #ced4da;
 }
 
-/* Navbar con efecto cristal */
-.glass-nav {
+.tech-bg{
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, CanvasText 7%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, CanvasText 7%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.glass-nav{
   backdrop-filter: blur(10px);
   background: var(--glass-bg);
 }
 
-/* Punto del logo */
-.brand-dot {
+.brand-dot{
   width: 10px;
   height: 10px;
   border-radius: 999px;
@@ -20,13 +26,13 @@
   background: currentColor;
 }
 
-/* Tarjeta hero */
-.hero-card {
-  border-radius: 18px;
+.hero-card{ border-radius: 18px; }
+
+.tech-panel{
+  border: 1px solid var(--panel-border) !important;
 }
 
-/* Avatar */
-.avatar {
+.avatar{
   width: 52px;
   height: 52px;
   border-radius: 14px;
@@ -37,8 +43,7 @@
   background: color-mix(in srgb, Canvas 92%, transparent);
 }
 
-/* ====== TAGS DEL HERO ====== */
-.tag {
+.tag{
   border: 1px solid #ced4da;
   border-radius: 999px;
   padding: 6px 10px;
@@ -47,29 +52,158 @@
   color: var(--badge-text-light);
 }
 
-/* ====== BADGES DE TIPO (Web / Portfolio, Documentacion, BBDD) ====== */
-.badge.text-bg-dark-subtle {
+.badge.text-bg-dark-subtle{
   background-color: var(--badge-bg-light) !important;
   color: var(--badge-text-light) !important;
   border: 1px solid #ced4da;
 }
 
-/* ====== BADGE PRINCIPAL (100% remoto...) ====== */
-#heroBadge {
+#heroBadge{
   background-color: var(--badge-bg-light);
   color: var(--badge-text-light);
   border: 1px solid #ced4da;
   font-weight: 500;
 }
 
-/* ====== MODO OSCURO ====== */
-[data-bs-theme="dark"] {
+/* Enfoque badges */
+.stack-badges{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+  max-width: 320px;
+}
+
+.stack-badges .badge{
+  border: 1px solid var(--panel-border);
+  background: color-mix(in srgb, Canvas 92%, transparent);
+  color: color-mix(in srgb, CanvasText 82%, transparent);
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* accordion */
+.tech-accordion .accordion-item{
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: color-mix(in srgb, Canvas 92%, transparent);
+  margin-bottom: 12px;
+}
+
+.tech-accordion .accordion-button{
+  background: transparent;
+  box-shadow: none;
+  font-weight: 600;
+}
+
+.tech-accordion .accordion-button:not(.collapsed){
+  background: color-mix(in srgb, Canvas 88%, transparent);
+}
+
+.tech-accordion .accordion-body{
+  color: color-mix(in srgb, CanvasText 75%, transparent);
+}
+
+/* Intro overlay + slide */
+.intro-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: color-mix(in srgb, Canvas 70%, transparent);
+  backdrop-filter: blur(10px);
+  transform: translateX(0);
+  opacity: 1;
+  transition:
+    transform 720ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 420ms ease;
+  will-change: transform, opacity;
+}
+
+.intro-overlay.is-leaving{
+  transform: translateX(-100%);
+  opacity: 1;
+}
+
+.intro-card{
+  width: min(760px, 100%);
+  border-radius: 18px;
+  border: 1px solid var(--panel-border);
+  background: color-mix(in srgb, Canvas 92%, transparent);
+  padding: 22px;
+  box-shadow: 0 12px 40px color-mix(in srgb, CanvasText 15%, transparent);
+}
+
+.intro-top{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.intro-dot{
+  margin-top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #0d6efd;
+  box-shadow: 0 0 0 6px color-mix(in srgb, #0d6efd 18%, transparent);
+}
+
+.intro-kicker{
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: color-mix(in srgb, CanvasText 55%, transparent);
+}
+
+.intro-title{
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.15;
+}
+
+.intro-sub{
+  color: color-mix(in srgb, CanvasText 70%, transparent);
+  max-width: 62ch;
+}
+
+/* App root: entra desde derecha */
+.app-root{
+  min-height: 100vh;
+  transform: translateX(100%);
+  opacity: 1;
+  transition: transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.app-root.is-entering{
+  transform: translateX(0);
+}
+
+.app-hidden{
+  display: none;
+}
+
+/* Dark mode: mejor por defecto */
+[data-bs-theme="dark"]{
   --badge-bg-light: #2b3035;
   --badge-text-light: #f8f9fa;
+  --panel-border: #495057;
 }
 
 [data-bs-theme="dark"] .tag,
 [data-bs-theme="dark"] #heroBadge,
-[data-bs-theme="dark"] .badge.text-bg-dark-subtle {
+[data-bs-theme="dark"] .badge.text-bg-dark-subtle{
   border-color: #495057;
+}
+
+[data-bs-theme="dark"].tech-bg{
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, #ffffff 7%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, #ffffff 7%, transparent) 1px, transparent 1px);
 }

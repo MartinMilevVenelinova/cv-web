@@ -6,8 +6,97 @@ function setTheme(mode) {
 }
 
 function toggleTheme() {
-  const current = document.documentElement.getAttribute("data-bs-theme") || "light";
-  setTheme(current === "light" ? "dark" : "light");
+  const current = document.documentElement.getAttribute("data-bs-theme") || "dark";
+  setTheme(current === "dark" ? "light" : "dark");
+}
+
+function smoothScrollInit(){
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener("click", (e) => {
+      const href = a.getAttribute("href");
+      if (!href || href === "#") return;
+      const el = document.querySelector(href);
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+function updateExpandBtn(){
+  const acc = $("#experienceAccordion");
+  const btn = $("#expandAllBtn");
+  if (!acc || !btn) return;
+
+  const collapses = acc.querySelectorAll(".accordion-collapse");
+  if (!collapses.length) return;
+
+  const anyClosed = Array.from(collapses).some(c => !c.classList.contains("show"));
+  btn.textContent = anyClosed ? "Expandir todo" : "Contraer todo";
+}
+
+function runIntroTransition(){
+  const overlay = $("#introOverlay");
+  const app = $("#appRoot");
+
+  app.classList.remove("app-hidden");
+  void app.offsetWidth;
+
+  overlay.classList.add("is-leaving");
+  app.classList.add("is-entering");
+
+  const done = () => {
+    overlay.style.display = "none";
+    overlay.removeEventListener("transitionend", done);
+  };
+  overlay.addEventListener("transitionend", done);
+}
+
+function introInit(data){
+  $("#enterGithub").href = data.links.github;
+
+  const btn = $("#enterBtn");
+  btn.disabled = true;
+
+  const bar = $("#introBar");
+  let p = 2;
+
+  const start = Date.now();
+  const minDurationMs = 1500;
+  const maxDurationMs = 3500;
+  const duration = minDurationMs + Math.random() * (maxDurationMs - minDurationMs);
+
+  const tick = () => {
+    const t = Math.min(1, (Date.now() - start) / duration);
+    const eased = 1 - Math.pow(1 - t, 3);
+    const noise = (Math.random() - 0.5) * 1.2;
+    p = Math.max(2, Math.min(100, eased * 100 + noise));
+    bar.style.width = `${p.toFixed(0)}%`;
+
+    if (t < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      bar.style.width = "100%";
+      btn.innerHTML = 'Entrando... <i class="bi bi-arrow-right-short"></i>';
+      setTimeout(() => {
+        runIntroTransition();
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }, 450);
+    }
+  };
+
+  requestAnimationFrame(tick);
+}
+
+function parseStackLine(stackLine){
+  if (!stackLine) return [];
+  // admite: "A • B • C" o "A, B, C"
+  const parts = stackLine
+    .split(/•|,/g)
+    .map(s => s.trim())
+    .filter(Boolean);
+  // quita duplicados
+  return Array.from(new Set(parts));
 }
 
 async function loadContent() {
@@ -22,7 +111,6 @@ async function loadContent() {
   $("#profileName").textContent = data.name;
   $("#profileRole").textContent = data.role;
   $("#profileLocation").textContent = data.location;
-  $("#profileStack").textContent = data.stackLine;
 
   $("#heroBadge").textContent = data.hero.badge;
   $("#heroTitle").textContent = data.hero.title;
@@ -31,17 +119,35 @@ async function loadContent() {
   $("#navGithub").href = data.links.github;
   $("#projectsMore").href = data.links.github;
 
-  if (data.links.linkedin && data.links.linkedin.trim()) {
+  const hasLinkedin = data.links.linkedin && data.links.linkedin.trim();
+  if (hasLinkedin) {
     $("#navLinkedin").href = data.links.linkedin;
     $("#navLinkedin").classList.remove("d-none");
+
+    const pl = $("#profileLinkedin");
+    pl.href = data.links.linkedin;
+    pl.classList.remove("d-none");
   } else {
     $("#navLinkedin").classList.add("d-none");
+    $("#profileLinkedin").classList.add("d-none");
   }
 
   $("#profileEmail").textContent = data.links.email;
   $("#profileEmail").href = `mailto:${data.links.email}`;
   $("#ctaMail").href = `mailto:${data.links.email}`;
 
+  // enfoque badges
+  const stackWrap = $("#profileStackBadges");
+  stackWrap.innerHTML = "";
+  const stackItems = parseStackLine(data.stackLine);
+  stackItems.forEach(item => {
+    const b = document.createElement("span");
+    b.className = "badge";
+    b.textContent = item;
+    stackWrap.appendChild(b);
+  });
+
+  // tags hero
   const tagsWrap = $("#heroTags");
   tagsWrap.innerHTML = "";
   data.hero.tags.forEach(t => {
@@ -51,13 +157,14 @@ async function loadContent() {
     tagsWrap.appendChild(span);
   });
 
+  // skills
   const skillsGrid = $("#skillsGrid");
   skillsGrid.innerHTML = "";
   data.skills.forEach(s => {
     const col = document.createElement("div");
     col.className = "col-md-6 col-lg-4";
     col.innerHTML = `
-      <div class="card h-100 border-0 shadow-sm">
+      <div class="card h-100 border-0 shadow-sm tech-panel">
         <div class="card-body">
           <div class="d-flex align-items-center gap-2 mb-2">
             <i class="bi bi-lightning-charge"></i>
@@ -72,34 +179,66 @@ async function loadContent() {
     skillsGrid.appendChild(col);
   });
 
-  const expList = $("#experienceList");
-  expList.innerHTML = "";
-  data.experience.forEach(e => {
-    const div = document.createElement("div");
-    div.className = "card border-0 shadow-sm";
-    div.innerHTML = `
-      <div class="card-body">
-        <div class="d-flex justify-content-between flex-wrap gap-2">
-          <div>
-            <div class="fw-bold">${e.position}</div>
-            <div class="text-secondary">${e.company}</div>
+  // experiencia accordion
+  const acc = $("#experienceAccordion");
+  acc.innerHTML = "";
+  data.experience.forEach((e, idx) => {
+    const headingId = `heading_${idx}`;
+    const collapseId = `collapse_${idx}`;
+
+    const item = document.createElement("div");
+    item.className = "accordion-item";
+    item.innerHTML = `
+      <h2 class="accordion-header" id="${headingId}">
+        <button class="accordion-button collapsed" type="button"
+          data-bs-toggle="collapse" data-bs-target="#${collapseId}"
+          aria-expanded="false" aria-controls="${collapseId}">
+          <div class="w-100 d-flex justify-content-between flex-wrap gap-2">
+            <div>
+              <div class="fw-bold">${e.position}</div>
+              <div class="text-secondary small">${e.company}</div>
+            </div>
+            <div class="text-secondary small">${e.period}</div>
           </div>
-          <div class="text-secondary small">${e.period}</div>
+        </button>
+      </h2>
+      <div id="${collapseId}" class="accordion-collapse collapse" aria-labelledby="${headingId}">
+        <div class="accordion-body">
+          <ul class="mb-0">
+            ${e.bullets.map(b => `<li>${b}</li>`).join("")}
+          </ul>
         </div>
-        <ul class="mt-3 mb-0">
-          ${e.bullets.map(b => `<li>${b}</li>`).join("")}
-        </ul>
-      </div>`;
-    expList.appendChild(div);
+      </div>
+    `;
+    acc.appendChild(item);
   });
 
+  acc.addEventListener("shown.bs.collapse", updateExpandBtn);
+  acc.addEventListener("hidden.bs.collapse", updateExpandBtn);
+
+  $("#expandAllBtn").addEventListener("click", () => {
+    const collapses = acc.querySelectorAll(".accordion-collapse");
+    const shouldExpand = Array.from(collapses).some(c => !c.classList.contains("show"));
+
+    collapses.forEach(c => {
+      const inst = bootstrap.Collapse.getOrCreateInstance(c, { toggle: false });
+      if (shouldExpand) inst.show();
+      else inst.hide();
+    });
+
+    setTimeout(updateExpandBtn, 80);
+  });
+
+  updateExpandBtn();
+
+  // proyectos
   const projGrid = $("#projectsGrid");
   projGrid.innerHTML = "";
   data.projects.forEach(p => {
     const col = document.createElement("div");
     col.className = "col-md-6 col-lg-4";
     col.innerHTML = `
-      <div class="card h-100 border-0 shadow-sm">
+      <div class="card h-100 border-0 shadow-sm tech-panel">
         <div class="card-body d-flex flex-column">
           <div class="d-flex justify-content-between align-items-start gap-2">
             <h3 class="h6 fw-bold">${p.name}</h3>
@@ -116,11 +255,17 @@ async function loadContent() {
       </div>`;
     projGrid.appendChild(col);
   });
+
+  // arranque
+  introInit(data);
+  smoothScrollInit();
+
+  return data;
 }
 
 (function init(){
-  const saved = localStorage.getItem("theme") || "light";
-  setTheme(saved);
+  const saved = localStorage.getItem("theme");
+  setTheme(saved || "dark"); // por defecto oscuro
 
   $("#themeBtn").addEventListener("click", toggleTheme);
 
