@@ -4,231 +4,231 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CV | Martin Milev</title>
-  <meta name="description" content="CV online: sistemas, soporte avanzado, BBDD y documentación técnica." />
 
+  <meta name="description" content="CV online de Martin Milev. Sistemas, soporte avanzado, BBDD y documentación técnica." />
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body class="bg-body tech-bg">
 
-  <!-- Intro / Loading -->
-  <div id="introOverlay" class="intro-overlay">
-    <div class="intro-card">
-      <div class="intro-top">
-        <span class="intro-dot"></span>
-        <div>
-          <div class="intro-kicker">CURRÍCULUM ONLINE</div>
-          <div class="intro-title" id="introTitle">Cargando mi CV...</div>
-        </div>
-      </div>
-
-      <div class="progress mt-3" role="progressbar" aria-label="cargando" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-        <div id="introBar" class="progress-bar" style="width: 5%"></div>
-      </div>
-
-      <p class="intro-sub mt-3 mb-3" id="introSub">
-        Perfil técnico orientado a sistemas, soporte avanzado y bases de datos.
-      </p>
-
-      <div class="d-flex gap-2 flex-wrap align-items-center">
-        <button id="enterBtn" class="btn btn-primary" disabled>
-          Cargando... <i class="bi bi-hourglass-split"></i>
-        </button>
-        <a id="enterGithub" class="btn btn-outline-secondary" target="_blank" rel="noreferrer">
-          Ver mi GitHub <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <span id="autoHint" class="small text-secondary ms-1">Al terminar, entra automáticamente</span>
-      </div>
-
-      <div class="intro-foot mt-3">
-        <span class="badge text-bg-secondary">CV público sin datos sensibles</span>
+<!-- ================= INTRO / LOADING ================= -->
+<div id="introOverlay" class="intro-overlay">
+  <div class="intro-card">
+    <div class="intro-top">
+      <span class="intro-dot"></span>
+      <div>
+        <div class="intro-kicker">CURRÍCULUM ONLINE</div>
+        <div class="intro-title">Cargando mi CV…</div>
       </div>
     </div>
+
+    <div class="progress mt-3">
+      <div id="introBar" class="progress-bar" style="width:5%"></div>
+    </div>
+
+    <p class="intro-sub mt-3">
+      Perfil técnico orientado a sistemas, soporte avanzado y bases de datos.
+    </p>
+
+    <div class="d-flex gap-2 flex-wrap align-items-center">
+      <button id="enterBtn" class="btn btn-primary" disabled>
+        Cargando…
+      </button>
+      <a id="enterGithub" class="btn btn-outline-secondary" target="_blank">
+        Ver GitHub
+      </a>
+    </div>
+
+    <div class="intro-foot mt-3">
+      <span class="badge text-bg-secondary">CV público sin datos sensibles</span>
+    </div>
   </div>
+</div>
 
-  <!-- App wrapper -->
-  <div id="appRoot" class="app-root app-hidden">
+<!-- ================= APP ================= -->
+<div id="appRoot" class="app-root app-hidden">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top glass-nav border-bottom">
-      <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="#inicio">
-          <span class="brand-dot"></span> <span id="brandName">MartinMilev.dev</span>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top glass-nav border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#inicio">
+        <span class="brand-dot"></span>
+        <span id="brandName">MartinMilev.dev</span>
+      </a>
+
+      <div class="d-flex align-items-center gap-2">
+        <div class="d-none d-md-flex gap-3 me-3">
+          <a class="nav-link" href="#habilidades">Habilidades</a>
+          <a class="nav-link" href="#formacion">Formación</a>
+          <a class="nav-link" href="#experiencia">Experiencia</a>
+          <a class="nav-link" href="#proyectos">Proyectos</a>
+        </div>
+
+        <a id="navGithub" class="btn btn-outline-secondary btn-sm motion-btn" target="_blank">
+          <i class="bi bi-github"></i>
         </a>
 
-        <div class="d-flex align-items-center gap-2">
-          <div class="d-none d-md-flex gap-2 me-2">
-            <a class="nav-link px-2" href="#habilidades">Habilidades</a>
-            <a class="nav-link px-2" href="#experiencia">Experiencia</a>
-            <a class="nav-link px-2" href="#proyectos">Proyectos</a>
-          </div>
+        <a id="navLinkedin" class="btn btn-outline-secondary btn-sm motion-btn d-none" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
 
-          <a id="navGithub" class="btn btn-outline-secondary btn-sm motion-btn" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <i class="bi bi-github"></i>
-          </a>
-          <a id="navLinkedin" class="btn btn-outline-secondary btn-sm d-none motion-btn" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <i class="bi bi-linkedin"></i>
-          </a>
-          <button id="themeBtn" class="btn btn-secondary btn-sm motion-btn" type="button" aria-label="Cambiar tema">
-            <i class="bi bi-moon-stars"></i>
-          </button>
-        </div>
+        <button id="themeBtn" class="btn btn-secondary btn-sm motion-btn">
+          <i class="bi bi-moon-stars"></i>
+        </button>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Hero -->
-    <header id="inicio" class="py-5 reveal">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-7">
-            <span class="badge text-bg-dark-subtle border mb-3" id="heroBadge">Disponible</span>
-            <h1 class="display-5 fw-bold lh-1" id="heroTitle">Sistemas, soporte avanzado y bases de datos</h1>
-            <p class="lead text-secondary" id="heroSubtitle">Cargando...</p>
+  <!-- ================= HERO ================= -->
+  <header id="inicio" class="py-5 reveal">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <span id="heroBadge" class="badge text-bg-dark-subtle border mb-3"></span>
 
-            <div class="d-flex flex-wrap gap-2 mt-3" id="heroTags"></div>
+          <h1 id="heroTitle" class="display-5 fw-bold"></h1>
+          <p id="heroSubtitle" class="lead text-secondary"></p>
 
-            <div class="d-flex flex-wrap gap-2 mt-4">
-              <a id="ctaMail" class="btn btn-primary btn-lg motion-btn" href="#">
-                <i class="bi bi-envelope"></i> Contactar
-              </a>
+          <div id="heroTags" class="d-flex flex-wrap gap-2 mt-3"></div>
 
-              <a id="ctaExperience" class="btn btn-outline-primary btn-lg motion-btn" href="#experiencia">
-                <i class="bi bi-diagram-3"></i> Ir a mi experiencia
-              </a>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <a id="ctaMail" class="btn btn-primary btn-lg motion-btn">
+              <i class="bi bi-envelope"></i> Contactar
+            </a>
 
-              <!-- Botón PDF (se oculta si no hay PDF configurado) -->
-              <a id="ctaPdf" class="btn btn-outline-secondary btn-lg d-none motion-btn" href="#" target="_blank" rel="noreferrer">
-                <i class="bi bi-download"></i> <span id="ctaPdfText">Descargar CV (PDF)</span>
-              </a>
-            </div>
+            <a href="#experiencia" class="btn btn-outline-primary btn-lg motion-btn">
+              <i class="bi bi-diagram-3"></i> Ir a mi experiencia
+            </a>
+
+            <a id="ctaPdf" class="btn btn-outline-secondary btn-lg motion-btn d-none" target="_blank">
+              <i class="bi bi-download"></i>
+              <span id="ctaPdfText">Descargar CV (PDF)</span>
+            </a>
           </div>
+        </div>
 
-          <div class="col-lg-5">
-            <div class="card shadow-sm border-0 hero-card tech-panel motion-card">
-              <div class="card-body">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="avatar">
-                    <i class="bi bi-person-badge"></i>
-                  </div>
-                  <div>
-                    <div class="fw-bold fs-5" id="profileName">Martin</div>
-                    <div class="text-secondary" id="profileRole">Rol</div>
-                  </div>
+        <div class="col-lg-5">
+          <div class="card hero-card tech-panel motion-card">
+            <div class="card-body">
+              <div class="d-flex gap-3 align-items-center">
+                <div class="avatar">
+                  <i class="bi bi-person-badge"></i>
+                </div>
+                <div>
+                  <div id="profileName" class="fw-bold fs-5"></div>
+                  <div id="profileRole" class="text-secondary"></div>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="d-grid gap-2 small">
+                <div class="d-flex justify-content-between">
+                  <span class="text-secondary">Ubicación</span>
+                  <span id="profileLocation" class="fw-semibold"></span>
                 </div>
 
-                <hr class="my-4">
+                <div class="d-flex justify-content-between">
+                  <span class="text-secondary">Email</span>
+                  <a id="profileEmail"></a>
+                </div>
 
-                <div class="d-grid gap-2">
-                  <div class="d-flex justify-content-between">
-                    <span class="text-secondary">Ubicación</span>
-                    <span class="fw-semibold" id="profileLocation">Madrid</span>
-                  </div>
+                <div class="d-flex justify-content-between">
+                  <span class="text-secondary">LinkedIn</span>
+                  <a id="profileLinkedin" class="d-none" target="_blank">Ver perfil</a>
+                </div>
 
-                  <div class="d-flex justify-content-between">
-                    <span class="text-secondary">Email</span>
-                    <a class="fw-semibold text-decoration-none" id="profileEmail" href="#">email</a>
-                  </div>
+                <div class="d-flex justify-content-between">
+                  <span class="text-secondary">CV PDF</span>
+                  <a id="profilePdf" class="d-none" target="_blank">Descargar</a>
+                </div>
 
-                  <div class="d-flex justify-content-between">
-                    <span class="text-secondary">LinkedIn</span>
-                    <a class="fw-semibold text-decoration-none d-none" id="profileLinkedin" href="#" target="_blank" rel="noreferrer">
-                      Ver perfil
-                    </a>
-                  </div>
-
-                  <div class="d-flex justify-content-between">
-                    <span class="text-secondary">CV PDF</span>
-                    <a class="fw-semibold text-decoration-none d-none" id="profilePdf" href="#" target="_blank" rel="noreferrer">
-                      CV Martin Milev (PDF)
-                    </a>
-                  </div>
-
-                  <div class="d-flex justify-content-between align-items-start gap-3">
-                    <span class="text-secondary">Enfoque</span>
-                    <div id="profileStackBadges" class="stack-badges text-end"></div>
-                  </div>
+                <div class="d-flex justify-content-between align-items-start gap-2">
+                  <span class="text-secondary">Enfoque</span>
+                  <div id="profileStackBadges" class="stack-badges"></div>
                 </div>
               </div>
             </div>
-
-            <p class="small text-secondary mt-3 mb-0">
-              Este CV es público y no incluye datos sensibles.
-            </p>
           </div>
+
+          <p class="small text-secondary mt-2">
+            Este CV es público y no incluye datos sensibles.
+          </p>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- Skills -->
-    <section id="habilidades" class="py-5 border-top reveal">
-      <div class="container">
-        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-4">
-          <div>
-            <h2 class="fw-bold mb-1">Habilidades</h2>
-            <p class="text-secondary mb-0">Tecnologías y herramientas con las que trabajo en mi día a día.</p>
-          </div>
-          <span class="small text-secondary">Tip: entra en Experiencia y despliega cada puesto</span>
+  <!-- ================= HABILIDADES ================= -->
+  <section id="habilidades" class="py-5 border-top reveal">
+    <div class="container">
+      <h2 class="fw-bold mb-1">Habilidades</h2>
+      <p class="text-secondary mb-4">Tecnologías y herramientas con las que trabajo en mi día a día.</p>
+      <div id="skillsGrid" class="row g-3"></div>
+    </div>
+  </section>
+
+  <!-- ================= FORMACION ================= -->
+  <section id="formacion" class="py-5 border-top reveal">
+    <div class="container">
+      <h2 class="fw-bold mb-1">Formación</h2>
+      <p class="text-secondary mb-4">Titulación y formación complementaria.</p>
+      <div id="educationGrid" class="row g-3"></div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCIA ================= -->
+  <section id="experiencia" class="py-5 border-top reveal">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-3">
+        <div>
+          <h2 class="fw-bold mb-1">Experiencia</h2>
+          <p class="text-secondary mb-0">Pulsa cada puesto para ver mis funciones.</p>
         </div>
-
-        <div class="row g-3" id="skillsGrid"></div>
+        <button id="expandAllBtn" class="btn btn-outline-secondary btn-sm motion-btn">
+          Expandir todo
+        </button>
       </div>
-    </section>
 
-    <!-- Experience -->
-    <section id="experiencia" class="py-5 border-top reveal">
-      <div class="container">
-        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-4">
-          <div>
-            <h2 class="fw-bold mb-1">Experiencia</h2>
-            <p class="text-secondary mb-0">Pulsa cada puesto para ver mis funciones y responsabilidades.</p>
-          </div>
-          <button id="expandAllBtn" class="btn btn-outline-secondary btn-sm motion-btn" type="button">
-            Expandir todo
-          </button>
+      <div id="experienceAccordion" class="accordion tech-accordion"></div>
+    </div>
+  </section>
+
+  <!-- ================= PROYECTOS ================= -->
+  <section id="proyectos" class="py-5 border-top reveal">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-3">
+        <div>
+          <h2 class="fw-bold mb-1">Proyectos</h2>
+          <p class="text-secondary mb-0">Repos y material técnico que refuerzan mi perfil.</p>
         </div>
-
-        <div class="accordion tech-accordion" id="experienceAccordion"></div>
+        <a id="projectsMore" class="btn btn-outline-secondary motion-btn" target="_blank">
+          Más en GitHub
+        </a>
       </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="proyectos" class="py-5 border-top reveal">
-      <div class="container">
-        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-4">
-          <div>
-            <h2 class="fw-bold mb-1">Proyectos</h2>
-            <p class="text-secondary mb-0">Repos y material técnico que refuerzan mi perfil.</p>
-          </div>
-          <a id="projectsMore" class="btn btn-outline-secondary motion-btn" target="_blank" rel="noreferrer">
-            <i class="bi bi-box-arrow-up-right"></i> Más en GitHub
-          </a>
-        </div>
+      <div id="projectsGrid" class="row g-3"></div>
+    </div>
+  </section>
 
-        <div class="row g-3" id="projectsGrid"></div>
-      </div>
-    </section>
+  <!-- FOOTER -->
+  <footer class="py-4 border-top">
+    <div class="container d-flex justify-content-between small text-secondary">
+      <span>© <span id="year"></span> <span id="footerName"></span></span>
+      <a href="/admin/" target="_blank"><i class="bi bi-shield-lock"></i></a>
+    </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="py-4 border-top">
-      <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
-        <div class="text-secondary small">
-          © <span id="year"></span> <span id="footerName">Martin Milev</span>
-        </div>
-        <div class="d-flex gap-2">
-          <a class="btn btn-sm btn-outline-secondary motion-btn" href="/admin/" target="_blank" rel="noreferrer" aria-label="Admin">
-            <i class="bi bi-shield-lock"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
+</div>
 
-  </div>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/app.js"></script>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>

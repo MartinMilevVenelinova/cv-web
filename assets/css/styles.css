@@ -4,7 +4,6 @@
   --badge-text-light: #212529;
   --panel-border: #ced4da;
 
-  /* motion */
   --ease-apple: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -87,7 +86,7 @@
   border-radius: 999px;
 }
 
-/* ---------- micro-motion ---------- */
+/* micro-motion */
 .motion-btn{
   transition:
     transform 180ms var(--ease-soft),
@@ -97,7 +96,7 @@
 }
 
 .motion-btn:hover{
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   filter: brightness(1.02);
 }
 
@@ -114,11 +113,11 @@
 }
 
 .motion-card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px color-mix(in srgb, CanvasText 12%, transparent);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px color-mix(in srgb, CanvasText 12%, transparent);
 }
 
-/* ---------- accordion ---------- */
+/* accordion */
 .tech-accordion .accordion-item{
   border: 1px solid var(--panel-border);
   border-radius: 14px;
@@ -147,7 +146,6 @@
   transition: transform 220ms var(--ease-soft);
 }
 
-/* el body aparece un pelin mas suave */
 .tech-accordion .accordion-body{
   color: color-mix(in srgb, CanvasText 75%, transparent);
   animation: fadeUp 220ms var(--ease-soft) both;
@@ -158,10 +156,10 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ---------- scroll reveal ---------- */
+/* scroll reveal */
 .reveal{
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(12px);
   transition: opacity 420ms var(--ease-apple), transform 420ms var(--ease-apple);
   will-change: opacity, transform;
 }
@@ -171,7 +169,7 @@
   transform: translateY(0);
 }
 
-/* ---------- Intro overlay + slide ---------- */
+/* Intro overlay + slide */
 .intro-overlay{
   position: fixed;
   inset: 0;
@@ -183,9 +181,7 @@
   backdrop-filter: blur(10px);
   transform: translateX(0);
   opacity: 1;
-  transition:
-    transform 720ms var(--ease-apple),
-    opacity 420ms ease;
+  transition: transform 720ms var(--ease-apple), opacity 420ms ease;
   will-change: transform, opacity;
 }
 
@@ -254,7 +250,7 @@
   display: none;
 }
 
-/* ---------- Dark mode ---------- */
+/* Dark mode */
 [data-bs-theme="dark"]{
   --badge-bg-light: #2b3035;
   --badge-text-light: #f8f9fa;
@@ -273,7 +269,7 @@
     linear-gradient(to bottom, color-mix(in srgb, #ffffff 7%, transparent) 1px, transparent 1px);
 }
 
-/* ---------- Accesibilidad: reduce motion ---------- */
+/* reduce motion */
 @media (prefers-reduced-motion: reduce){
   .motion-btn,
   .motion-card,

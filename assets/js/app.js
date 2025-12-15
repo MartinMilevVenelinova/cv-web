@@ -68,16 +68,13 @@ function introInit(data){
 
   const tick = () => {
     const t = Math.min(1, (Date.now() - start) / duration);
-
-    // easing suave (sin “saltos”)
     const eased = 1 - Math.pow(1 - t, 3);
     p = Math.max(2, Math.min(100, eased * 100));
 
     bar.style.width = `${p.toFixed(0)}%`;
 
-    if (t < 1) {
-      requestAnimationFrame(tick);
-    } else {
+    if (t < 1) requestAnimationFrame(tick);
+    else {
       bar.style.width = "100%";
       btn.innerHTML = 'Entrando... <i class="bi bi-arrow-right-short"></i>';
       setTimeout(() => {
@@ -101,7 +98,7 @@ function parseStackLine(stackLine){
 
 function setPdfLinks(data){
   const pdfUrl = (data.cvPdf || "").trim();
-  const pdfLabel = (data.cvPdfLabel || "Descargar CV (PDF)").trim();
+  const pdfLabel = (data.cvPdfLabel || "CV Martin Milev (PDF)").trim();
 
   const ctaPdf = $("#ctaPdf");
   const ctaPdfText = $("#ctaPdfText");
@@ -119,9 +116,10 @@ function setPdfLinks(data){
   }
   if (ctaPdfText) ctaPdfText.textContent = pdfLabel;
 
+  // en la tarjeta siempre “Descargar”
   if (profilePdf) {
     profilePdf.href = pdfUrl;
-    profilePdf.textContent = pdfLabel; // aqui lo renombramos tambien
+    profilePdf.textContent = "Descargar";
     profilePdf.classList.remove("d-none");
   }
 }
@@ -196,10 +194,10 @@ async function loadContent() {
     stackWrap.appendChild(b);
   });
 
-  // pdf links (hero + tarjeta)
+  // pdf
   setPdfLinks(data);
 
-  // tags hero
+  // hero tags
   const tagsWrap = $("#heroTags");
   tagsWrap.innerHTML = "";
   data.hero.tags.forEach(t => {
@@ -209,7 +207,7 @@ async function loadContent() {
     tagsWrap.appendChild(span);
   });
 
-  // skills cards
+  // skills
   const skillsGrid = $("#skillsGrid");
   skillsGrid.innerHTML = "";
   data.skills.forEach(s => {
@@ -231,7 +229,27 @@ async function loadContent() {
     skillsGrid.appendChild(col);
   });
 
-  // experience accordion
+  // educación / formación
+  const eduGrid = $("#educationGrid");
+  eduGrid.innerHTML = "";
+  (data.education || []).forEach(ed => {
+    const col = document.createElement("div");
+    col.className = "col-md-6 col-lg-4";
+    col.innerHTML = `
+      <div class="card h-100 border-0 shadow-sm tech-panel motion-card">
+        <div class="card-body">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <i class="bi bi-mortarboard"></i>
+            <h3 class="h6 fw-bold mb-0">${ed.title}</h3>
+          </div>
+          <div class="text-secondary small mb-2">${ed.center || ""}</div>
+          <div class="small text-secondary">${ed.period || ""}</div>
+        </div>
+      </div>`;
+    eduGrid.appendChild(col);
+  });
+
+  // experiencia accordion
   const acc = $("#experienceAccordion");
   acc.innerHTML = "";
   data.experience.forEach((e, idx) => {
@@ -283,7 +301,7 @@ async function loadContent() {
 
   updateExpandBtn();
 
-  // projects cards
+  // proyectos
   const projGrid = $("#projectsGrid");
   projGrid.innerHTML = "";
   data.projects.forEach(p => {
@@ -308,7 +326,6 @@ async function loadContent() {
     projGrid.appendChild(col);
   });
 
-  // init
   introInit(data);
   smoothScrollInit();
   revealInit();
@@ -318,7 +335,7 @@ async function loadContent() {
 
 (function init(){
   const saved = localStorage.getItem("theme");
-  setTheme(saved || "dark"); // por defecto oscuro
+  setTheme(saved || "dark"); // ✅ por defecto oscuro
 
   $("#themeBtn").addEventListener("click", toggleTheme);
 
