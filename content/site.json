@@ -1,56 +1,70 @@
 {
-  "brandName": "MartinMilev.dev",
-  "name": "Martin Milev Venelinova",
-  "role": "Tecnico de Sistemas y Soporte Avanzado | Windows / AD / BBDD",
-  "location": "Madrid, España",
-  "stackLine": "Windows, Active Directory, O365, SQL, Redes, Documentacion tecnica",
-  "links": {
-    "email": "martin.milev.vene@gmail.com",
-    "github": "https://github.com/MartinMilevVenelinova",
-    "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
-  },
-  "hero": {
-    "badge": "100% remoto · Disponibilidad geografica y horaria",
-    "title": "Sistemas, soporte avanzado y bases de datos",
-    "subtitle": "Trabajo en entornos corporativos criticos resolviendo incidencias complejas, gestionando usuarios/permisos y dando soporte remoto. Vengo de SMR y DAM, y estoy con Master en Big Data e IA.",
-    "tags": [
-      "Windows / Active Directory",
-      "Office 365 / MFA",
-      "SQL & BBDD",
-      "VPN · DNS · Proxy",
-      "Documentacion tecnica"
-    ]
-  },
   "skills": [
     {
       "title": "Sistemas & Administracion",
       "description": "Gestion de usuarios, accesos y soporte en entorno corporativo.",
-      "items": ["Active Directory", "Office 365", "Azure (permisos)", "Soporte remoto", "Gestion de accesos"]
+      "items": [
+        "Active Directory",
+        "Office 365",
+        "Azure (permisos)",
+        "Soporte remoto",
+        "Gestion de accesos"
+      ]
     },
     {
       "title": "Redes & Conectividad",
       "description": "Soporte en conectividad, configuracion y diagnostico.",
-      "items": ["VPN", "DNS", "Proxy", "IP fija/variable", "Impresoras/Escaneres"]
+      "items": [
+        "VPN",
+        "DNS",
+        "Proxy",
+        "IP fija/variable",
+        "Impresoras/Escaneres"
+      ]
     },
     {
       "title": "Bases de datos",
       "description": "BBDD relacionales y NoSQL para consultas, soporte y reporting.",
-      "items": ["MySQL", "PostgreSQL", "MongoDB", "SQL (general)"]
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "SQL (general)"
+      ]
     },
     {
       "title": "Incidencias & Operativa",
       "description": "Ticketing, escalado, calidad de servicio y reporting.",
-      "items": ["FARO", "Escalado N2/N3", "Odigo (calidad)", "Power BI", "PowerPoint"]
+      "items": [
+        "FARO",
+        "Escalado N2/N3",
+        "Odigo (calidad)",
+        "Power BI",
+        "PowerPoint"
+      ]
     },
     {
       "title": "Desarrollo (plus)",
       "description": "Tengo base en desarrollo full-stack y APIs.",
-      "items": ["Java", "Spring Boot", "HTML", "CSS", "Bootstrap", "APIs REST"]
+      "items": [
+        "Java",
+        "Spring Boot",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "APIs REST"
+      ]
     },
     {
       "title": "Herramientas (plus)",
       "description": "Herramientas que he usado en proyectos y operativa diaria.",
-      "items": ["Jenkins (operativa O365)", "Excel (analisis)", "Consultas SQL (reporting)", "Nagios", "FileZilla"]
+      "items": [
+        "Jenkins (operativa O365)",
+        "Excel (analisis)",
+        "Consultas SQL (reporting)",
+        "Nagios",
+        "FileZilla"
+      ]
     }
   ],
   "experience": [
@@ -111,6 +125,15 @@
       ]
     }
   ],
+  "name": "Martin Milev Venelinova",
+  "brandName": "MartinMilev.dev",
+  "location": "Madrid, Españaaaaa",
+  "role": "Tecnico de Sistemas y Soporte Avanzado | Windows / AD / BBDD",
+  "links": {
+    "email": "martin.milev.vene@gmail.com",
+    "github": "https://github.com/MartinMilevVenelinova",
+    "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
+  },
   "projects": [
     {
       "name": "Web CV editable (Decap CMS + Netlify)",
@@ -133,5 +156,18 @@
       "demo": "",
       "repo": ""
     }
-  ]
+  ],
+  "hero": {
+    "badge": "100% remoto · Disponibilidad geografica y horaria",
+    "title": "Sistemas, soporte avanzado y bases de datos",
+    "subtitle": "Trabajo en entornos corporativos criticos resolviendo incidencias complejas, gestionando usuarios/permisos y dando soporte remoto. Vengo de SMR y DAM, y estoy con Master en Big Data e IA.",
+    "tags": [
+      "Windows / Active Directory",
+      "Office 365 / MFA",
+      "SQL & BBDD",
+      "VPN · DNS · Proxy",
+      "Documentacion tecnica"
+    ]
+  },
+  "stackLine": "Windows, Active Directory, O365, SQL, Redes, Documentacion tecnica"
 }
