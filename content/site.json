@@ -1,141 +1,81 @@
 {
   "brandName": "MartinMilev.dev",
   "name": "Martin Milev Venelinova",
-  "role": "Tecnico de Sistemas y Soporte Avanzado | Windows / AD / BBDD",
-  "location": "Madrid, Espana",
-  "stackLine": "Windows, Active Directory, O365, SQL, Redes, Documentacion tecnica",
+  "role": "Técnico de Sistemas y Soporte Avanzado | Windows / AD / BBDD",
+  "location": "Madrid, España",
+  "stackLine": "Windows, Active Directory, O365, SQL, Redes, Documentación técnica",
 
-  "cvPdf": "/assets/uploads/CV_Martin_Milev_Moderno.pdf",
-  "cvPdfLabel": "Descargar CV (PDF)",
+  "cvPdf": "/assets/uploads/CV Martin Milev.pdf",
+  "cvPdfLabel": "CV Martin Milev (PDF)",
 
   "links": {
     "email": "martin.milev.vene@gmail.com",
     "github": "https://github.com/MartinMilevVenelinova",
     "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
   },
+
   "hero": {
-    "badge": "100% remoto · Disponibilidad geografica y horaria",
+    "badge": "100% remoto · Disponibilidad geográfica y horaria",
     "title": "Sistemas, soporte avanzado y bases de datos",
-    "subtitle": "Trabajo en entornos corporativos criticos resolviendo incidencias complejas, gestionando usuarios/permisos y dando soporte remoto. Vengo de SMR y DAM, y estoy con Master en Big Data e IA.",
+    "subtitle": "Trabajo en entornos corporativos críticos resolviendo incidencias complejas, gestionando usuarios y permisos, y dando soporte remoto. Formación en SMR, DAM y Máster en Big Data e Inteligencia Artificial.",
     "tags": [
       "Windows / Active Directory",
       "Office 365 / MFA",
       "SQL & BBDD",
       "VPN · DNS · Proxy",
-      "Documentacion tecnica"
+      "Documentación técnica"
     ]
   },
+
   "skills": [
     {
-      "title": "Sistemas & Administracion",
-      "description": "Gestion de usuarios, accesos y soporte en entorno corporativo.",
-      "items": ["Active Directory", "Office 365", "Azure (permisos)", "Soporte remoto", "Gestion de accesos"]
+      "title": "Sistemas y Administración",
+      "description": "Gestión de usuarios, accesos y soporte en entornos corporativos.",
+      "items": ["Active Directory", "Office 365", "Azure (permisos)", "Soporte remoto", "Gestión de accesos"]
     },
     {
-      "title": "Redes & Conectividad",
-      "description": "Soporte en conectividad, configuracion y diagnostico.",
-      "items": ["VPN", "DNS", "Proxy", "IP fija/variable", "Impresoras/Escaneres"]
+      "title": "Redes y Conectividad",
+      "description": "Soporte en conectividad, configuración y diagnóstico.",
+      "items": ["VPN", "DNS", "Proxy", "IP fija / variable", "Impresoras y escáneres"]
     },
     {
       "title": "Bases de datos",
-      "description": "BBDD relacionales y NoSQL para consultas, soporte y reporting.",
-      "items": ["MySQL", "PostgreSQL", "MongoDB", "SQL (general)"]
+      "description": "BBDD relacionales y NoSQL para soporte, consultas y reporting.",
+      "items": ["SQL (general)", "MySQL", "PostgreSQL", "MongoDB"]
     },
     {
-      "title": "Incidencias & Operativa",
-      "description": "Ticketing, escalado, calidad de servicio y reporting.",
-      "items": ["FARO", "Escalado N2/N3", "Odigo (calidad)", "Power BI", "PowerPoint"]
+      "title": "Incidencias y Operativa",
+      "description": "Gestión de incidencias, escalado y calidad de servicio.",
+      "items": ["FARO", "Escalado N2/N3", "Odigo", "Power BI", "PowerPoint"]
     },
     {
-      "title": "Desarrollo (plus)",
-      "description": "Tengo base en desarrollo full-stack y APIs.",
-      "items": ["Java", "Spring Boot", "HTML", "CSS", "Bootstrap", "APIs REST"]
-    },
-    {
-      "title": "Herramientas (plus)",
-      "description": "Herramientas que he usado en proyectos y operativa diaria.",
-      "items": ["Jenkins (operativa O365)", "Excel (analisis)", "Consultas SQL (reporting)", "Nagios", "FileZilla"]
+      "title": "Desarrollo (base técnica)",
+      "description": "Base sólida en desarrollo y consumo de APIs.",
+      "items": ["Java", "Spring Boot", "APIs REST", "HTML", "CSS", "Bootstrap", "JavaScript", "Python"]
     }
   ],
+
   "experience": [
     {
-      "position": "Tecnico de Soporte Avanzado – Colectivos VIP",
+      "position": "Técnico de Soporte Avanzado – Colectivos VIP",
       "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
       "period": "Dic 2024 – Actualidad",
       "bullets": [
-        "Doy soporte remoto especializado a usuarios VIP (letrados, magistrados, jueces y fiscales) con atencion exclusiva.",
-        "Administro usuarios y permisos, desbloqueos y accesos a aplicativos por perfiles (gestor, responsable, etc.).",
-        "Soporte integral de puesto: impresoras, multifunciones, escaneres, carpetas compartidas y aplicaciones corporativas.",
-        "Soporte de VPN y teletrabajo, incidencias de correo y autenticacion.",
-        "Soporte a Bomberos: sistemas SITREM y APPB, incidencias en parques (caidas de red, ethernet, proxy, subredes), telefonia movil y sistemas de sirenas."
-      ]
-    },
-    {
-      "position": "Coordinador Tecnico de Equipo (rol adicional)",
-      "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
-      "period": "2025 – Actualidad",
-      "bullets": [
-        "Coordino la operativa de un equipo de 11 agentes: reparto de tareas, apoyo y seguimiento.",
-        "Hago escucha y valoracion de llamadas en Odigo, control de calidad y mejoras.",
-        "Preparo informes y estadisticas del servicio con Power BI y presentaciones en PowerPoint.",
-        "Analizo grandes volumenes de datos del ticketing (FARO), comparativas y limpieza de datos.",
-        "Uso consultas SQL por cuenta propia para agilizar reporting y sacar indicadores."
-      ]
-    },
-    {
-      "position": "Tecnico de Soporte Avanzado / Sistemas (HCORE)",
-      "company": "Madrid Digital – Grupo Solutio (DXC)",
-      "period": "Oct 2023 – Dic 2024",
-      "bullets": [
-        "Soporte remoto avanzado en VPN, proxy, teletrabajo y entorno Microsoft corporativo.",
-        "Office 365: delegacion y ampliacion de buzones, y reseteo de doble factor (MFA) mediante Jenkins.",
-        "Gestion de incidencias y escalado con FARO."
-      ]
-    },
-    {
-      "position": "Tecnico IT / Responsable IT de Almacen",
-      "company": "Logisfashion – Ontigola (operativa Inditex)",
-      "period": "Jul 2021 – Feb 2023",
-      "bullets": [
-        "Lleve el soporte integral de sistemas en almacen y oficinas: hardware, software y dispositivos industriales/moviles RFID.",
-        "Gestione permisos y accesos en Azure, y trabaje con herramienta de ticketing corporativa.",
-        "Soporte de AS400 (entorno Tordera) y sistemas asociados a la operativa logistica.",
-        "Coordinacion con Inditex en tuneles RFID y proyectos relacionados con alarmas de productos.",
-        "Asumi funciones de responsable del area IT por falta de personal: priorizacion de proyectos, autonomia y organizacion del trabajo.",
-        "Coordine y forme a nuevas incorporaciones cuando se amplio el equipo tecnico."
-      ]
-    },
-    {
-      "position": "Desarrollador Full-Stack (practicas)",
-      "company": "BioErgon, UEx",
-      "period": "Feb 2023 – Jun 2023",
-      "bullets": [
-        "Desarrolle back-end en Java/Spring Boot y front-end con HTML/CSS/Bootstrap.",
-        "Disene y gestione base de datos MongoDB para recopilacion de datos."
+        "Soporte remoto especializado a usuarios VIP (letrados, magistrados, jueces y fiscales).",
+        "Administración de usuarios, permisos y accesos a aplicaciones corporativas.",
+        "Soporte integral de puesto: impresoras, escáneres, carpetas compartidas y aplicaciones.",
+        "Gestión de VPN, teletrabajo, incidencias de correo y autenticación.",
+        "Soporte a Bomberos: sistemas SITREM y APPB, incidencias de red y telefonía."
       ]
     }
   ],
+
   "projects": [
     {
-      "name": "Web CV editable (Decap CMS + Netlify)",
+      "name": "CV Web Editable",
       "type": "Web / Portfolio",
-      "description": "CV online publico y editable sin tocar codigo, con panel /admin y contenido en JSON.",
-      "demo": "",
+      "description": "Currículum online editable sin tocar código, con CMS basado en GitHub y despliegue en Netlify.",
       "repo": "https://github.com/MartinMilevVenelinova"
-    },
-    {
-      "name": "Procedimientos y documentacion tecnica (plantillas)",
-      "type": "Documentacion",
-      "description": "Plantillas de instalacion/actualizacion, checklist de migraciones y guias de troubleshooting orientadas a sistemas.",
-      "demo": "",
-      "repo": ""
-    },
-    {
-      "name": "Lab SQL (consultas y ejercicios)",
-      "type": "BBDD",
-      "description": "Coleccion de consultas SQL y casos practicos (base para SQL Server/Oracle).",
-      "demo": "",
-      "repo": ""
     }
   ]
 }

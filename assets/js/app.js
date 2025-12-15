@@ -62,8 +62,8 @@ function introInit(data){
   let p = 2;
 
   const start = Date.now();
-  const minDurationMs = 9500;
-  const maxDurationMs = 13500;
+  const minDurationMs = 1500;
+  const maxDurationMs = 3500;
   const duration = minDurationMs + Math.random() * (maxDurationMs - minDurationMs);
 
   const tick = () => {
