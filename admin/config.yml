@@ -2,6 +2,8 @@ backend:
   name: github
   repo: MartinMilevVenelinova/cv-web
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
@@ -38,3 +40,4 @@ collections:
                 name: "tags"
                 widget: "list"
                 field: { label: "Tag", name: "tag", widget: "string" }
+
