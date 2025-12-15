@@ -1,0 +1,173 @@
+{
+  "brandName": "MartinMilev.dev",
+  "name": "Martin Milev Venelinova",
+  "role": "Tecnico de Sistemas y Soporte Avanzado | Windows / AD / BBDD",
+  "location": "Madrid, Espana",
+  "stackLine": "Windows • Active Directory • O365 • SQL • Redes • Documentacion tecnica",
+  "links": {
+    "email": "martin.milev.vene@gmail.com",
+    "github": "https://github.com/MartinMilevVenelinova",
+    "linkedin": ""
+  },
+  "hero": {
+    "badge": "100% remoto · Disponibilidad geografica y horaria",
+    "title": "Sistemas, soporte avanzado y bases de datos",
+    "subtitle": "Experiencia en entornos corporativos criticos: incidencias complejas, administracion de usuarios/permisos y soporte remoto. Formacion en SMR, DAM y Master en Big Data e IA.",
+    "tags": [
+      "Windows / Active Directory",
+      "Office 365 / MFA",
+      "SQL & BBDD",
+      "VPN · DNS · Proxy",
+      "Documentacion tecnica"
+    ]
+  },
+  "skills": [
+    {
+      "title": "Sistemas & Administracion",
+      "description": "Gestion de usuarios, accesos y soporte en entorno corporativo.",
+      "items": [
+        "Active Directory",
+        "Office 365",
+        "Azure (permisos)",
+        "Soporte remoto",
+        "Gestion de accesos"
+      ]
+    },
+    {
+      "title": "Redes & Conectividad",
+      "description": "Soporte en conectividad, configuracion y diagnostico.",
+      "items": [
+        "VPN",
+        "DNS",
+        "Proxy",
+        "IP fija/variable",
+        "Impresoras/Escaneres"
+      ]
+    },
+    {
+      "title": "Bases de datos",
+      "description": "Conocimientos y experiencia con BBDD relacionales y NoSQL.",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "SQL (general)"
+      ]
+    },
+    {
+      "title": "Incidencias & Operativa",
+      "description": "Ticketing, escalado, calidad de servicio y reporting.",
+      "items": [
+        "FARO",
+        "Escalado N2/N3",
+        "Odigo (calidad)",
+        "Power BI",
+        "PowerPoint"
+      ]
+    },
+    {
+      "title": "Desarrollo (plus)",
+      "description": "Background en desarrollo full-stack y APIs.",
+      "items": [
+        "Java",
+        "Spring Boot",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "APIs REST"
+      ]
+    },
+    {
+      "title": "Herramientas (plus)",
+      "description": "Herramientas usadas en el dia a dia.",
+      "items": [
+        "Jenkins (operativa O365)",
+        "Excel (analisis)",
+        "Consultas SQL (reporting)",
+        "Nagios",
+        "FileZilla"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "position": "Tecnico de Soporte Avanzado – Colectivos VIP",
+      "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
+      "period": "Dic 2024 – Actualidad",
+      "bullets": [
+        "Soporte remoto especializado a usuarios VIP (letrados, magistrados, jueces y fiscales) con atencion exclusiva.",
+        "Administracion de usuarios y permisos, desbloqueos y accesos a aplicativos por perfiles (gestor, responsable, etc.).",
+        "Soporte integral de puesto: impresoras, multifunciones, escaneres, carpetas compartidas y aplicaciones corporativas.",
+        "Soporte de VPN y teletrabajo, incidencias de correo y autenticacion.",
+        "Soporte a Bomberos: sistemas SITREM y APPB, incidencias en parques (caidas de red, ethernet, proxy, subredes), telefonia movil y sistemas de sirenas."
+      ]
+    },
+    {
+      "position": "Coordinador Tecnico de Equipo (rol adicional)",
+      "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
+      "period": "2025 – Actualidad",
+      "bullets": [
+        "Coordinacion operativa de un equipo de 11 agentes: reparto de tareas, apoyo y seguimiento.",
+        "Escucha y valoracion de llamadas en Odigo, control de calidad y propuestas de mejora.",
+        "Informes y estadisticas del servicio con Power BI y presentaciones en PowerPoint.",
+        "Analisis de grandes volumenes de datos de ticketing (FARO), incluyendo comparativas y limpieza de datos.",
+        "Uso de consultas SQL por cuenta propia para agilizar reporting y sacar indicadores."
+      ]
+    },
+    {
+      "position": "Tecnico de Soporte Avanzado / Sistemas (HCORE)",
+      "company": "Madrid Digital – Grupo Solutio (DXC)",
+      "period": "Oct 2023 – Dic 2024",
+      "bullets": [
+        "Soporte remoto avanzado en VPN, proxy, teletrabajo y entorno Microsoft corporativo.",
+        "Office 365: delegacion y ampliacion de buzones, y reseteo de doble factor (MFA) mediante Jenkins.",
+        "Gestion de incidencias y escalado con FARO."
+      ]
+    },
+    {
+      "position": "Tecnico IT / Responsable IT de Almacen",
+      "company": "Logisfashion – Ontigola (operativa Inditex)",
+      "period": "Jul 2021 – Feb 2023",
+      "bullets": [
+        "Soporte integral de sistemas en almacen y oficinas: hardware, software y dispositivos industriales/moviles RFID.",
+        "Gestion de permisos y accesos en Azure, y uso de herramienta de ticketing corporativa.",
+        "Soporte de AS400 (entorno Tordera) y sistemas asociados a la operativa logistica.",
+        "Coordinacion con Inditex en tuneles RFID y proyectos relacionados con alarmas de productos.",
+        "Asumi funciones de responsable del area IT por falta de personal: priorizacion de proyectos, autonomia total y organizacion del trabajo.",
+        "Coordinacion y formacion de nuevas incorporaciones cuando se amplio el equipo tecnico."
+      ]
+    },
+    {
+      "position": "Desarrollador Full-Stack (practicas)",
+      "company": "BioErgon, UEx",
+      "period": "Feb 2023 – Jun 2023",
+      "bullets": [
+        "Desarrollo back-end en Java/Spring Boot y front-end con HTML/CSS/Bootstrap.",
+        "Diseno y gestion de base de datos MongoDB para recopilacion de datos."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Web CV editable (Decap CMS + Netlify)",
+      "type": "Web / Portfolio",
+      "description": "CV online publico y editable sin tocar codigo, con panel /admin y contenido en JSON.",
+      "demo": "",
+      "repo": "https://github.com/MartinMilevVenelinova"
+    },
+    {
+      "name": "Procedimientos y documentacion tecnica (plantillas)",
+      "type": "Documentacion",
+      "description": "Plantillas de instalacion/actualizacion, checklist de migraciones y guias de troubleshooting orientadas a sistemas.",
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "name": "Lab SQL (consultas y ejercicios)",
+      "type": "BBDD",
+      "description": "Coleccion de consultas SQL y casos practicos (base para SQL Server/Oracle).",
+      "demo": "",
+      "repo": ""
+    }
+  ]
+}
