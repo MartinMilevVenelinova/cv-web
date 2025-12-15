@@ -16,14 +16,18 @@ collections:
         label: "Datos del CV"
         name: "site"
         fields:
-
-          # ---- Datos personales ----
           - { label: "Nombre", name: "name", widget: "string" }
           - { label: "Rol", name: "role", widget: "string" }
           - { label: "Ubicacion", name: "location", widget: "string" }
           - { label: "Linea de enfoque", name: "stackLine", widget: "string" }
 
-          # ---- Links ----
+          - label: "CV en PDF (descarga)"
+            name: "cvPdf"
+            widget: "file"
+            required: false
+
+          - { label: "Texto del boton PDF", name: "cvPdfLabel", widget: "string", required: false }
+
           - label: "Links"
             name: "links"
             widget: "object"
@@ -32,7 +36,6 @@ collections:
               - { label: "GitHub", name: "github", widget: "string" }
               - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
 
-          # ---- Hero ----
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -45,7 +48,6 @@ collections:
                 widget: "list"
                 field: { label: "Tag", name: "tag", widget: "string" }
 
-          # ---- Habilidades ----
           - label: "Habilidades"
             name: "skills"
             widget: "list"
@@ -57,7 +59,6 @@ collections:
                 widget: "list"
                 field: { label: "Item", name: "item", widget: "string" }
 
-          # ---- Experiencia ----
           - label: "Experiencia"
             name: "experience"
             widget: "list"
@@ -70,7 +71,6 @@ collections:
                 widget: "list"
                 field: { label: "Descripcion", name: "bullet", widget: "string" }
 
-          # ---- Proyectos ----
           - label: "Proyectos"
             name: "projects"
             widget: "list"

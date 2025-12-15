@@ -62,8 +62,8 @@ function introInit(data){
   let p = 2;
 
   const start = Date.now();
-  const minDurationMs = 1500;
-  const maxDurationMs = 3500;
+  const minDurationMs = 9500;
+  const maxDurationMs = 13500;
   const duration = minDurationMs + Math.random() * (maxDurationMs - minDurationMs);
 
   const tick = () => {
@@ -90,13 +90,40 @@ function introInit(data){
 
 function parseStackLine(stackLine){
   if (!stackLine) return [];
-  // admite: "A • B • C" o "A, B, C"
   const parts = stackLine
     .split(/•|,/g)
     .map(s => s.trim())
     .filter(Boolean);
-  // quita duplicados
   return Array.from(new Set(parts));
+}
+
+function setPdfLinks(data){
+  const pdfUrl = (data.cvPdf || "").trim();
+  const pdfLabel = (data.cvPdfLabel || "Descargar CV (PDF)").trim();
+
+  const ctaPdf = $("#ctaPdf");
+  const ctaPdfText = $("#ctaPdfText");
+  const profilePdf = $("#profilePdf");
+
+  // si no hay pdf configurado, lo ocultamos y ya
+  if (!pdfUrl) {
+    if (ctaPdf) ctaPdf.classList.add("d-none");
+    if (profilePdf) profilePdf.classList.add("d-none");
+    return;
+  }
+
+  // hero button
+  if (ctaPdf) {
+    ctaPdf.href = pdfUrl;
+    ctaPdf.classList.remove("d-none");
+  }
+  if (ctaPdfText) ctaPdfText.textContent = pdfLabel;
+
+  // tarjeta lateral
+  if (profilePdf) {
+    profilePdf.href = pdfUrl;
+    profilePdf.classList.remove("d-none");
+  }
 }
 
 async function loadContent() {
@@ -146,6 +173,9 @@ async function loadContent() {
     b.textContent = item;
     stackWrap.appendChild(b);
   });
+
+  // pdf links (hero + tarjeta)
+  setPdfLinks(data);
 
   // tags hero
   const tagsWrap = $("#heroTags");
@@ -256,7 +286,6 @@ async function loadContent() {
     projGrid.appendChild(col);
   });
 
-  // arranque
   introInit(data);
   smoothScrollInit();
 
