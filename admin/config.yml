@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "cv"
+    label: "Curriculum"
+    files:
+      - file: "content/site.json"
+        label: "Datos del CV"
+        name: "site"
+        fields:
+          - { label: "Nombre", name: "name", widget: "string" }
+          - { label: "Rol", name: "role", widget: "string" }
+          - { label: "Ubicacion", name: "location", widget: "string" }
+          - { label: "Linea de enfoque", name: "stackLine", widget: "string" }
+
+          - label: "Links"
+            name: "links"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "GitHub", name: "github", widget: "string" }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Subtitulo", name: "subtitle", widget: "text" }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
