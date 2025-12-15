@@ -62,15 +62,17 @@ function introInit(data){
   let p = 2;
 
   const start = Date.now();
-  const minDurationMs = 1500;
-  const maxDurationMs = 3500;
+  const minDurationMs = 1300;
+  const maxDurationMs = 3700;
   const duration = minDurationMs + Math.random() * (maxDurationMs - minDurationMs);
 
   const tick = () => {
     const t = Math.min(1, (Date.now() - start) / duration);
+
+    // easing suave (sin “saltos”)
     const eased = 1 - Math.pow(1 - t, 3);
-    const noise = (Math.random() - 0.5) * 1.2;
-    p = Math.max(2, Math.min(100, eased * 100 + noise));
+    p = Math.max(2, Math.min(100, eased * 100));
+
     bar.style.width = `${p.toFixed(0)}%`;
 
     if (t < 1) {
@@ -81,7 +83,7 @@ function introInit(data){
       setTimeout(() => {
         runIntroTransition();
         window.scrollTo({ top: 0, behavior: "instant" });
-      }, 450);
+      }, 220);
     }
   };
 
@@ -105,25 +107,45 @@ function setPdfLinks(data){
   const ctaPdfText = $("#ctaPdfText");
   const profilePdf = $("#profilePdf");
 
-  // si no hay pdf configurado, lo ocultamos y ya
   if (!pdfUrl) {
     if (ctaPdf) ctaPdf.classList.add("d-none");
     if (profilePdf) profilePdf.classList.add("d-none");
     return;
   }
 
-  // hero button
   if (ctaPdf) {
     ctaPdf.href = pdfUrl;
     ctaPdf.classList.remove("d-none");
   }
   if (ctaPdfText) ctaPdfText.textContent = pdfLabel;
 
-  // tarjeta lateral
   if (profilePdf) {
     profilePdf.href = pdfUrl;
+    profilePdf.textContent = pdfLabel; // aqui lo renombramos tambien
     profilePdf.classList.remove("d-none");
   }
+}
+
+function revealInit(){
+  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReduced) {
+    document.querySelectorAll(".reveal").forEach(el => el.classList.add("is-visible"));
+    return;
+  }
+
+  const els = document.querySelectorAll(".reveal");
+  if (!els.length) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("is-visible");
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+  els.forEach(el => io.observe(el));
 }
 
 async function loadContent() {
@@ -187,14 +209,14 @@ async function loadContent() {
     tagsWrap.appendChild(span);
   });
 
-  // skills
+  // skills cards
   const skillsGrid = $("#skillsGrid");
   skillsGrid.innerHTML = "";
   data.skills.forEach(s => {
     const col = document.createElement("div");
     col.className = "col-md-6 col-lg-4";
     col.innerHTML = `
-      <div class="card h-100 border-0 shadow-sm tech-panel">
+      <div class="card h-100 border-0 shadow-sm tech-panel motion-card">
         <div class="card-body">
           <div class="d-flex align-items-center gap-2 mb-2">
             <i class="bi bi-lightning-charge"></i>
@@ -209,7 +231,7 @@ async function loadContent() {
     skillsGrid.appendChild(col);
   });
 
-  // experiencia accordion
+  // experience accordion
   const acc = $("#experienceAccordion");
   acc.innerHTML = "";
   data.experience.forEach((e, idx) => {
@@ -261,14 +283,14 @@ async function loadContent() {
 
   updateExpandBtn();
 
-  // proyectos
+  // projects cards
   const projGrid = $("#projectsGrid");
   projGrid.innerHTML = "";
   data.projects.forEach(p => {
     const col = document.createElement("div");
     col.className = "col-md-6 col-lg-4";
     col.innerHTML = `
-      <div class="card h-100 border-0 shadow-sm tech-panel">
+      <div class="card h-100 border-0 shadow-sm tech-panel motion-card">
         <div class="card-body d-flex flex-column">
           <div class="d-flex justify-content-between align-items-start gap-2">
             <h3 class="h6 fw-bold">${p.name}</h3>
@@ -276,9 +298,9 @@ async function loadContent() {
           </div>
           <p class="text-secondary">${p.description}</p>
           <div class="mt-auto d-flex gap-2">
-            ${p.demo ? `<a class="btn btn-sm btn-primary" target="_blank" rel="noreferrer" href="${p.demo}">
+            ${p.demo ? `<a class="btn btn-sm btn-primary motion-btn" target="_blank" rel="noreferrer" href="${p.demo}">
               <i class="bi bi-play-circle"></i> Demo</a>` : ""}
-            ${p.repo ? `<a class="btn btn-sm btn-outline-secondary" target="_blank" rel="noreferrer" href="${p.repo}">
+            ${p.repo ? `<a class="btn btn-sm btn-outline-secondary motion-btn" target="_blank" rel="noreferrer" href="${p.repo}">
               <i class="bi bi-code-slash"></i> Repo</a>` : ""}
           </div>
         </div>
@@ -286,8 +308,10 @@ async function loadContent() {
     projGrid.appendChild(col);
   });
 
+  // init
   introInit(data);
   smoothScrollInit();
+  revealInit();
 
   return data;
 }
