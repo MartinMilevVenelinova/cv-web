@@ -1,32 +1,4 @@
 {
-  "brandName": "MartinMilev.dev",
-  "name": "Martin Milev Venelinova",
-  "role": "Técnico de Sistemas y Soporte Avanzado | Windows / AD / BBDD",
-  "location": "Madrid, España",
-  "stackLine": "Windows • Active Directory • O365 • SQL • Redes • Documentación técnica",
-
-  "cvPdf": "/assets/uploads/CV Martin Milev.pdf",
-  "cvPdfLabel": "CV Martin Milev (PDF)",
-
-  "links": {
-    "email": "martin.milev.vene@gmail.com",
-    "github": "https://github.com/MartinMilevVenelinova",
-    "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
-  },
-
-  "hero": {
-    "badge": "100% remoto · Disponibilidad geográfica y horaria",
-    "title": "Sistemas, soporte avanzado y bases de datos",
-    "subtitle": "Trabajo en entornos corporativos críticos resolviendo incidencias complejas, gestionando usuarios y permisos, y dando soporte remoto. Formación en SMR, DAM y Máster en Big Data e Inteligencia Artificial.",
-    "tags": [
-      "Windows / Active Directory",
-      "Office 365 / MFA",
-      "SQL & BBDD",
-      "VPN · DNS · Proxy",
-      "Documentación técnica"
-    ]
-  },
-
   "skills": [
     {
       "title": "Sistemas y Administración",
@@ -97,7 +69,6 @@
       ]
     }
   ],
-
   "education": [
     {
       "title": "Grado Medio – Sistemas Microinformáticos y Redes (SMR)",
@@ -115,7 +86,6 @@
       "period": ""
     }
   ],
-
   "experience": [
     {
       "position": "Técnico de Soporte Avanzado – Colectivos VIP",
@@ -184,7 +154,16 @@
       ]
     }
   ],
-
+  "name": "Martin Milev Venelinova",
+  "brandName": "MartinMilev.dev",
+  "cvPdfLabel": "CV Martin Milev (PDF)",
+  "location": "Madrid, España",
+  "role": "Técnico de Sistemas y Soporte Avanzado | Windows / AD / BBDD",
+  "links": {
+    "email": "martin.milev.vene@gmail.com",
+    "github": "https://github.com/MartinMilevVenelinova",
+    "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
+  },
   "projects": [
     {
       "name": "Web CV editable (Decap CMS + Netlify)",
@@ -207,5 +186,19 @@
       "demo": "",
       "repo": ""
     }
-  ]
+  ],
+  "hero": {
+    "badge": "100% remoto · Disponibilidad geográfica y horaria",
+    "title": "Sistemas, soporte avanzado y bases de datos",
+    "subtitle": "Trabajo en entornos corporativos críticos resolviendo incidencias complejas, gestionando usuarios y permisos, y dando soporte remoto. Formación en SMR, DAM y Máster en Big Data e Inteligencia Artificial.",
+    "tags": [
+      "Windows / Active Directory",
+      "Office 365 / MFA",
+      "SQL & BBDD",
+      "VPN · DNS · Proxy",
+      "Documentación técnica"
+    ]
+  },
+  "stackLine": "Windows • Active Directory • O365 • SQL • Redes • Documentación técnica",
+  "cvPdf": "/assets/uploads/cv-martin-milev.pdf"
 }
