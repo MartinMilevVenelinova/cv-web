@@ -1,0 +1,204 @@
+{
+  "skills": [
+    {
+      "title": "Systeme & Administration",
+      "description": "Benutzer- und Zugriffsverwaltung sowie Support in Unternehmensumgebungen.",
+      "items": [
+        "Active Directory",
+        "Microsoft 365",
+        "Azure (Berechtigungen)",
+        "Remote-Support",
+        "Zugriffsverwaltung"
+      ]
+    },
+    {
+      "title": "Netzwerk & Konnektivität",
+      "description": "Support für Konnektivität, Konfiguration und Fehlerdiagnose.",
+      "items": [
+        "VPN",
+        "DNS",
+        "Proxy",
+        "Statische / dynamische IP",
+        "Drucker & Scanner"
+      ]
+    },
+    {
+      "title": "Datenbanken",
+      "description": "Relationale und NoSQL-Datenbanken für Support, Abfragen und Reporting.",
+      "items": [
+        "SQL (allgemein)",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "title": "Incidents & Betrieb",
+      "description": "Ticketing, Eskalation, Servicequalität und Reporting.",
+      "items": [
+        "FARO",
+        "Eskalation N2/N3",
+        "Odigo (Qualität)",
+        "Power BI",
+        "PowerPoint"
+      ]
+    },
+    {
+      "title": "Entwicklung (technische Basis)",
+      "description": "Solide Basis in Entwicklung und API-Nutzung.",
+      "items": [
+        "Java",
+        "Spring Boot",
+        "REST-APIs",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "title": "Tools (Plus)",
+      "description": "Tools aus Projekten und dem täglichen Betrieb.",
+      "items": [
+        "Jenkins (M365 Ops)",
+        "Excel (Analyse)",
+        "SQL-Abfragen (Reporting)",
+        "Nagios",
+        "FileZilla"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Berufsausbildung (mittel) — Mikrocomputersysteme & Netzwerke (SMR)",
+      "center": "",
+      "period": ""
+    },
+    {
+      "title": "Berufsausbildung (höher) — Multiplattform-Anwendungsentwicklung (DAM)",
+      "center": "",
+      "period": ""
+    },
+    {
+      "title": "Master — Big Data Analytics & Generative Künstliche Intelligenz",
+      "center": "",
+      "period": ""
+    }
+  ],
+  "experience": [
+    {
+      "position": "Techniker für Advanced Support — VIP-Benutzer",
+      "company": "Madrid Digital — AYESA ATECH SOLUTIONS",
+      "period": "Dec 2024 – Heute",
+      "bullets": [
+        "Spezialisierter Remote-Support für VIP-Benutzer (Anwälte, Richter, Staatsanwälte) mit exklusiver Betreuung.",
+        "Benutzer- und Berechtigungsverwaltung: Entsperrungen, Zugriffe und rollenbasierte Profile in Unternehmensanwendungen.",
+        "Workplace-Support: Drucker, Multifunktionsgeräte, Scanner, gemeinsame Ordner und Arbeitsanwendungen.",
+        "Support für VPN, Remote Work, E-Mail-Incidents und Authentifizierung."
+      ]
+    },
+    {
+      "position": "Support für die Feuerwehr (zusätzlicher Service)",
+      "company": "Madrid Digital — AYESA ATECH SOLUTIONS",
+      "period": "2025 – Heute",
+      "bullets": [
+        "Support für Systeme und Anwendungen des Dienstes: SITREM und APPB (mobil).",
+        "Incidents in Wachen: Netzwerkausfälle, Ethernet, Proxy, Subnetze und allgemeine Konnektivität.",
+        "Support rund um mobile Telefonie, Kommunikation und Service-Equipment (je nach Standort/Umgebung)."
+      ]
+    },
+    {
+      "position": "Teamkoordination (11 Agents) — Qualität & Reporting",
+      "company": "Madrid Digital — AYESA ATECH SOLUTIONS",
+      "period": "2025 – Heute",
+      "bullets": [
+        "Operative Koordination von 11 Agents: Unterstützung, Organisation und Task-Follow-up.",
+        "Call-Monitoring und Bewertung in Odigo: Qualitätskontrolle und Verbesserungsvorschläge.",
+        "Service-Reports und Statistiken mit Power BI sowie Präsentationen in PowerPoint.",
+        "Analyse von Ticketing-Daten (FARO) mit großen Volumina (10.000+ Datensätze), Konsolidierung und Vergleiche.",
+        "Eigenständige SQL-Abfragen zur Beschleunigung des Reportings und zur Gewinnung nützlicher Kennzahlen."
+      ]
+    },
+    {
+      "position": "Techniker für Advanced Support / Systeme (HCORE)",
+      "company": "Madrid Digital — Grupo Solutio (DXC)",
+      "period": "Oct 2023 – Dec 2024",
+      "bullets": [
+        "Advanced Remote-Support für VPN, Proxy, Remote Work und Microsoft-Unternehmensumgebungen.",
+        "Microsoft 365: Postfachdelegation/-erweiterung und MFA-Reset mit Jenkins.",
+        "Incident-Management via Ticketing (FARO) und Eskalation nach Kritikalität."
+      ]
+    },
+    {
+      "position": "IT-Techniker / IT-Verantwortlicher im Lager",
+      "company": "Logisfashion — Ontígola (Inditex operations)",
+      "period": "Jul 2021 – Feb 2023",
+      "bullets": [
+        "Umfassender System-Support im Lager und Büro: Geräte, Peripherie, Incidents und tägliche Abläufe.",
+        "Verwaltung von mobilen Geräten und RFID-Equipment (Imaging, Support, Wartung).",
+        "Berechtigungs-/Zugriffsverwaltung in Azure und Nutzung von Corporate-Ticketing-Tools.",
+        "Support für AS400-Systeme (Umgebung Tordera) und zugehörige Prozesse.",
+        "Abstimmung mit Inditex bei RFID-Tunneln und Projekten zu Produktsicherheits-Alarmen.",
+        "Übernahme von Organisation und Priorisierung aufgrund von Personalmangel und unvollständiger Übergabe.",
+        "Koordination und Einarbeitung neuer Mitarbeiter bei Teamerweiterung."
+      ]
+    },
+    {
+      "position": "Full-Stack-Entwickler (Praktikum)",
+      "company": "BioErgon, UEx",
+      "period": "Feb 2023 – Jun 2023",
+      "bullets": [
+        "Back-end-Entwicklung mit Java / Spring Boot und Front-end mit HTML, CSS und Bootstrap.",
+        "Entwurf und Nutzung einer MongoDB-Datenbank zur Datenerfassung und -verwaltung."
+      ]
+    }
+  ],
+  "name": "Martin Milev Venelinova",
+  "brandName": "Martin-Milev.dev",
+  "cvPdfLabel": "Lebenslauf Martin Milev (PDF)",
+  "location": "Madrid, Spanien",
+  "role": "Techniker für Systeme & Advanced Support | Windows / AD / Datenbanken",
+  "links": {
+    "email": "martin.milev.vene@gmail.com",
+    "github": "https://github.com/MartinMilevVenelinova",
+    "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
+  },
+  "projects": [
+    {
+      "name": "Editierbare CV-Website (Decap CMS + Netlify)",
+      "type": "Web / Portfolio",
+      "description": "Öffentlicher, editierbarer Online-Lebenslauf ohne Code-Änderungen, mit /admin-Panel und JSON-Content (GitHub + Auto-Deploy).",
+      "demo": "",
+      "repo": "https://github.com/MartinMilevVenelinova/cv-web"
+    },
+    {
+      "name": "Prozesse & technische Dokumentation (Vorlagen)",
+      "type": "Dokumentation",
+      "description": "Vorlagen für Installation/Updates, Migrations-Checklisten und Troubleshooting-Guides für Systeme.",
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "name": "SQL-Lab (Abfragen & Übungen)",
+      "type": "Datenbanken",
+      "description": "Sammlung von SQL-Abfragen und Praxisfällen (Basis für SQL Server/Oracle).",
+      "demo": "",
+      "repo": ""
+    }
+  ],
+  "hero": {
+    "badge": "Remote verfügbar · Flexible Orts- & Zeitverfügbarkeit",
+    "title": "Systeme, Advanced Support & Datenbanken",
+    "subtitle": "Ich arbeite in kritischen Unternehmensumgebungen, löse komplexe Incidents, verwalte Benutzer und Berechtigungen und leiste Remote-Support. Ausbildung in SMR, DAM und ein Master in Big Data & Generativer KI.",
+    "tags": [
+      "Windows / Active Directory",
+      "Microsoft 365 / MFA",
+      "SQL & Datenbanken",
+      "VPN · DNS · Proxy",
+      "Technische Dokumentation"
+    ]
+  },
+  "stackLine": "Windows • Active Directory • M365 • SQL • Netzwerk • Technische Dokumentation",
+  "cvPdf": "/assets/uploads/CV MARTIN MILEV.pdf"
+}

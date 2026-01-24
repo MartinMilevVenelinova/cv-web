@@ -8,6 +8,13 @@
   --ease-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+.brand-logo{
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
 .tech-bg{
   background-image:
     linear-gradient(to right, color-mix(in srgb, CanvasText 7%, transparent) 1px, transparent 1px),
@@ -285,4 +292,36 @@
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* ================= Language switcher (EN | ES | DE) ================= */
+.lang-switch{
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.lang-switch .lang-btn{
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.lang-switch .lang-btn:hover{
+  opacity: 1;
+}
+
+.lang-switch .lang-btn.active{
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.lang-switch .lang-sep{
+  opacity: 0.45;
+  padding: 0 8px;
 }

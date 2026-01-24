@@ -12,9 +12,9 @@ collections:
   - name: "cv"
     label: "Curriculum"
     files:
-      - file: "content/site.json"
-        label: "Datos del CV"
-        name: "site"
+      - file: "content/site.en.json"
+        label: "Datos del CV (EN)"
+        name: "site_en"
         fields:
           - { label: "Nombre", name: "name", widget: "string" }
           - { label: "Rol", name: "role", widget: "string" }
@@ -58,6 +58,168 @@ collections:
                 name: "items"
                 widget: "list"
                 field: { label: "Item", name: "item", widget: "string" }
+
+          - label: "Formacion"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Centro", name: "center", widget: "string", required: false }
+              - { label: "Periodo", name: "period", widget: "string", required: false }
+
+          - label: "Experiencia"
+            name: "experience"
+            widget: "list"
+            fields:
+              - { label: "Puesto", name: "position", widget: "string" }
+              - { label: "Empresa", name: "company", widget: "string" }
+              - { label: "Periodo", name: "period", widget: "string" }
+              - label: "Funciones"
+                name: "bullets"
+                widget: "list"
+                field: { label: "Descripcion", name: "bullet", widget: "string" }
+
+          - label: "Proyectos"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Tipo", name: "type", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "text" }
+              - { label: "Demo", name: "demo", widget: "string", required: false }
+              - { label: "Repositorio", name: "repo", widget: "string", required: false }
+
+      - file: "content/site.es.json"
+        label: "Datos del CV (ES)"
+        name: "site_es"
+        fields:
+          - { label: "Nombre", name: "name", widget: "string" }
+          - { label: "Rol", name: "role", widget: "string" }
+          - { label: "Ubicacion", name: "location", widget: "string" }
+          - { label: "Linea de enfoque", name: "stackLine", widget: "string" }
+
+          - label: "CV en PDF (descarga)"
+            name: "cvPdf"
+            widget: "file"
+            required: false
+
+          - { label: "Texto del boton PDF", name: "cvPdfLabel", widget: "string", required: false }
+
+          - label: "Links"
+            name: "links"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "GitHub", name: "github", widget: "string" }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Subtitulo", name: "subtitle", widget: "text" }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+
+          - label: "Habilidades"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+
+          - label: "Formacion"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Centro", name: "center", widget: "string", required: false }
+              - { label: "Periodo", name: "period", widget: "string", required: false }
+
+          - label: "Experiencia"
+            name: "experience"
+            widget: "list"
+            fields:
+              - { label: "Puesto", name: "position", widget: "string" }
+              - { label: "Empresa", name: "company", widget: "string" }
+              - { label: "Periodo", name: "period", widget: "string" }
+              - label: "Funciones"
+                name: "bullets"
+                widget: "list"
+                field: { label: "Descripcion", name: "bullet", widget: "string" }
+
+          - label: "Proyectos"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Tipo", name: "type", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "text" }
+              - { label: "Demo", name: "demo", widget: "string", required: false }
+              - { label: "Repositorio", name: "repo", widget: "string", required: false }
+
+      - file: "content/site.de.json"
+        label: "Datos del CV (DE)"
+        name: "site_de"
+        fields:
+          - { label: "Nombre", name: "name", widget: "string" }
+          - { label: "Rol", name: "role", widget: "string" }
+          - { label: "Ubicacion", name: "location", widget: "string" }
+          - { label: "Linea de enfoque", name: "stackLine", widget: "string" }
+
+          - label: "CV en PDF (descarga)"
+            name: "cvPdf"
+            widget: "file"
+            required: false
+
+          - { label: "Texto del boton PDF", name: "cvPdfLabel", widget: "string", required: false }
+
+          - label: "Links"
+            name: "links"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "GitHub", name: "github", widget: "string" }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Subtitulo", name: "subtitle", widget: "text" }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+
+          - label: "Habilidades"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+
+          - label: "Formacion"
+            name: "education"
+            widget: "list"
+            fields:
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Centro", name: "center", widget: "string", required: false }
+              - { label: "Periodo", name: "period", widget: "string", required: false }
 
           - label: "Experiencia"
             name: "experience"

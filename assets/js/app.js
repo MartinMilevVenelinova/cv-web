@@ -1,5 +1,172 @@
 const $ = (s) => document.querySelector(s);
 
+const SUPPORTED_LANGS = ["en", "es", "de"];
+let currentLang = "en";
+
+let introPlayed = false;
+let experienceBound = false;
+let smoothScrollBound = false;
+let revealBound = false;
+
+const I18N = {
+  en: {
+    pageTitle: "CV | Martin Milev",
+    metaDescription: "Online CV of Martin Milev. Systems, advanced support, databases and technical documentation.",
+
+    introKicker: "ONLINE RESUME",
+    introTitle: "Loading CV…",
+    introSub: "Technical profile focused on systems, advanced support and databases.",
+    introLoadingBtn: "Loading…",
+    introEntering: "Entering…",
+    enterGithubText: "View GitHub",
+    introFootBadge: "Public CV (no sensitive data)",
+
+    navSkills: "Skills",
+    navEducation: "Education",
+    navExperience: "Experience",
+    navProjects: "Projects",
+
+    ctaMail: "Contact",
+    ctaExperience: "Go to my experience",
+
+    labelLocation: "Location",
+    labelEmail: "Email",
+    labelLinkedIn: "LinkedIn",
+    labelPdf: "CV PDF",
+    labelFocus: "Focus",
+
+    viewProfile: "View profile",
+    download: "Download",
+
+    publicNote: "This CV is public and does not include sensitive data.",
+
+    skillsTitle: "Skills",
+    skillsSubtitle: "Technologies and tools I use in my day-to-day.",
+    educationTitle: "Education",
+    educationSubtitle: "Degrees and additional training.",
+    experienceTitle: "Experience",
+    experienceHint: "Click each role to see my responsibilities.",
+    projectsTitle: "Projects",
+    projectsSubtitle: "Repos and technical material that strengthen my profile.",
+    projectsMore: "More on GitHub",
+
+    expandAll: "Expand all",
+    collapseAll: "Collapse all",
+
+    projectDemo: "Demo",
+    projectRepo: "Repo",
+
+    cvPdfFallbackLabel: "Download CV (PDF)",
+    alertLoadFail: "Could not load content. Please check your JSON files in /content."
+  },
+
+  es: {
+    pageTitle: "CV | Martin Milev",
+    metaDescription: "CV online de Martin Milev. Sistemas, soporte avanzado, BBDD y documentación técnica.",
+
+    introKicker: "CURRÍCULUM ONLINE",
+    introTitle: "Cargando CV…",
+    introSub: "Perfil técnico orientado a sistemas, soporte avanzado y bases de datos.",
+    introLoadingBtn: "Cargando…",
+    introEntering: "Entrando…",
+    enterGithubText: "Ver GitHub",
+    introFootBadge: "CV público sin datos sensibles",
+
+    navSkills: "Habilidades",
+    navEducation: "Formación",
+    navExperience: "Experiencia",
+    navProjects: "Proyectos",
+
+    ctaMail: "Contactar",
+    ctaExperience: "Ir a mi experiencia",
+
+    labelLocation: "Ubicación",
+    labelEmail: "Email",
+    labelLinkedIn: "LinkedIn",
+    labelPdf: "CV PDF",
+    labelFocus: "Enfoque",
+
+    viewProfile: "Ver perfil",
+    download: "Descargar",
+
+    publicNote: "Este CV es público y no incluye datos sensibles.",
+
+    skillsTitle: "Habilidades",
+    skillsSubtitle: "Tecnologías y herramientas con las que trabajo en mi día a día.",
+    educationTitle: "Formación",
+    educationSubtitle: "Titulación y formación complementaria.",
+    experienceTitle: "Experiencia",
+    experienceHint: "Pulsa cada puesto para ver mis funciones.",
+    projectsTitle: "Proyectos",
+    projectsSubtitle: "Repos y material técnico que refuerzan mi perfil.",
+    projectsMore: "Más en GitHub",
+
+    expandAll: "Expandir todo",
+    collapseAll: "Contraer todo",
+
+    projectDemo: "Demo",
+    projectRepo: "Repo",
+
+    cvPdfFallbackLabel: "Descargar CV (PDF)",
+    alertLoadFail: "No se pudo cargar el contenido. Revisa tus JSON en /content."
+  },
+
+  de: {
+    pageTitle: "Lebenslauf | Martin Milev",
+    metaDescription: "Online-Lebenslauf von Martin Milev. Systeme, erweiterter Support, Datenbanken und technische Dokumentation.",
+
+    introKicker: "ONLINE-LEBENSLAUF",
+    introTitle: "Lebenslauf wird geladen…",
+    introSub: "Technisches Profil mit Fokus auf Systeme, Advanced Support und Datenbanken.",
+    introLoadingBtn: "Laden…",
+    introEntering: "Öffnen…",
+    enterGithubText: "GitHub ansehen",
+    introFootBadge: "Öffentlicher CV (keine sensiblen Daten)",
+
+    navSkills: "Skills",
+    navEducation: "Ausbildung",
+    navExperience: "Erfahrung",
+    navProjects: "Projekte",
+
+    ctaMail: "Kontakt",
+    ctaExperience: "Zu meiner Erfahrung",
+
+    labelLocation: "Standort",
+    labelEmail: "E-Mail",
+    labelLinkedIn: "LinkedIn",
+    labelPdf: "CV PDF",
+    labelFocus: "Fokus",
+
+    viewProfile: "Profil ansehen",
+    download: "Herunterladen",
+
+    publicNote: "Dieser Lebenslauf ist öffentlich und enthält keine sensiblen Daten.",
+
+    skillsTitle: "Skills",
+    skillsSubtitle: "Technologien und Tools, die ich täglich nutze.",
+    educationTitle: "Ausbildung",
+    educationSubtitle: "Abschlüsse und zusätzliche Weiterbildung.",
+    experienceTitle: "Erfahrung",
+    experienceHint: "Klicke auf jede Position, um Aufgaben zu sehen.",
+    projectsTitle: "Projekte",
+    projectsSubtitle: "Repos und technisches Material, das mein Profil stärkt.",
+    projectsMore: "Mehr auf GitHub",
+
+    expandAll: "Alle öffnen",
+    collapseAll: "Alle schließen",
+
+    projectDemo: "Demo",
+    projectRepo: "Repo",
+
+    cvPdfFallbackLabel: "CV herunterladen (PDF)",
+    alertLoadFail: "Inhalt konnte nicht geladen werden. Prüfe deine JSON-Dateien in /content."
+  }
+};
+
+function t(key){
+  return (I18N[currentLang] && I18N[currentLang][key]) || I18N.en[key] || key;
+}
+
 function setTheme(mode) {
   document.documentElement.setAttribute("data-bs-theme", mode);
   localStorage.setItem("theme", mode);
@@ -11,6 +178,9 @@ function toggleTheme() {
 }
 
 function smoothScrollInit(){
+  if (smoothScrollBound) return;
+  smoothScrollBound = true;
+
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener("click", (e) => {
       const href = a.getAttribute("href");
@@ -26,18 +196,27 @@ function smoothScrollInit(){
 function updateExpandBtn(){
   const acc = $("#experienceAccordion");
   const btn = $("#expandAllBtn");
-  if (!acc || !btn) return;
+  if (!btn) return;
+
+  if (!acc) {
+    btn.textContent = t("expandAll");
+    return;
+  }
 
   const collapses = acc.querySelectorAll(".accordion-collapse");
-  if (!collapses.length) return;
+  if (!collapses.length) {
+    btn.textContent = t("expandAll");
+    return;
+  }
 
   const anyClosed = Array.from(collapses).some(c => !c.classList.contains("show"));
-  btn.textContent = anyClosed ? "Expandir todo" : "Contraer todo";
+  btn.textContent = anyClosed ? t("expandAll") : t("collapseAll");
 }
 
 function runIntroTransition(){
   const overlay = $("#introOverlay");
   const app = $("#appRoot");
+  if (!overlay || !app) return;
 
   app.classList.remove("app-hidden");
   void app.offsetWidth;
@@ -53,10 +232,14 @@ function runIntroTransition(){
 }
 
 function introInit(data){
-  $("#enterGithub").href = data.links.github;
+  const gh = $("#enterGithub");
+  if (gh) gh.href = data.links.github;
 
   const btn = $("#enterBtn");
+  if (!btn) return;
+
   btn.disabled = true;
+  btn.textContent = t("introLoadingBtn");
 
   const bar = $("#introBar");
   let p = 2;
@@ -67,16 +250,16 @@ function introInit(data){
   const duration = minDurationMs + Math.random() * (maxDurationMs - minDurationMs);
 
   const tick = () => {
-    const t = Math.min(1, (Date.now() - start) / duration);
-    const eased = 1 - Math.pow(1 - t, 3);
+    const t01 = Math.min(1, (Date.now() - start) / duration);
+    const eased = 1 - Math.pow(1 - t01, 3);
     p = Math.max(2, Math.min(100, eased * 100));
 
-    bar.style.width = `${p.toFixed(0)}%`;
+    if (bar) bar.style.width = `${p.toFixed(0)}%`;
 
-    if (t < 1) requestAnimationFrame(tick);
+    if (t01 < 1) requestAnimationFrame(tick);
     else {
-      bar.style.width = "100%";
-      btn.innerHTML = 'Entrando... <i class="bi bi-arrow-right-short"></i>';
+      if (bar) bar.style.width = "100%";
+      btn.innerHTML = `${t("introEntering")} <i class="bi bi-arrow-right-short"></i>`;
       setTimeout(() => {
         runIntroTransition();
         window.scrollTo({ top: 0, behavior: "instant" });
@@ -98,11 +281,12 @@ function parseStackLine(stackLine){
 
 function setPdfLinks(data){
   const pdfUrl = (data.cvPdf || "").trim();
-  const pdfLabel = (data.cvPdfLabel || "CV Martin Milev (PDF)").trim();
+  const pdfLabel = (data.cvPdfLabel || t("cvPdfFallbackLabel")).trim();
 
   const ctaPdf = $("#ctaPdf");
   const ctaPdfText = $("#ctaPdfText");
   const profilePdf = $("#profilePdf");
+  const profilePdfText = $("#profilePdfText");
 
   if (!pdfUrl) {
     if (ctaPdf) ctaPdf.classList.add("d-none");
@@ -116,15 +300,17 @@ function setPdfLinks(data){
   }
   if (ctaPdfText) ctaPdfText.textContent = pdfLabel;
 
-  // en la tarjeta siempre “Descargar”
   if (profilePdf) {
     profilePdf.href = pdfUrl;
-    profilePdf.textContent = "Descargar";
     profilePdf.classList.remove("d-none");
   }
+  if (profilePdfText) profilePdfText.textContent = t("download");
 }
 
 function revealInit(){
+  if (revealBound) return;
+  revealBound = true;
+
   const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReduced) {
     document.querySelectorAll(".reveal").forEach(el => el.classList.add("is-visible"));
@@ -146,9 +332,108 @@ function revealInit(){
   els.forEach(el => io.observe(el));
 }
 
-async function loadContent() {
-  const res = await fetch("content/site.json", { cache: "no-store" });
-  const data = await res.json();
+function setActiveLangButton(lang){
+  document.querySelectorAll(".lang-btn").forEach(b => {
+    const active = (b.dataset.lang === lang);
+    b.classList.toggle("active", active);
+    b.setAttribute("aria-pressed", active ? "true" : "false");
+  });
+}
+
+function setUrlLang(lang){
+  const url = new URL(window.location.href);
+  url.searchParams.set("lang", lang);
+  window.history.replaceState({}, "", url);
+}
+
+function applyStaticTranslations(){
+  document.title = t("pageTitle");
+
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta) meta.setAttribute("content", t("metaDescription"));
+
+  const pairs = [
+    ["introKicker", "introKicker"],
+    ["introTitle", "introTitle"],
+    ["introSub", "introSub"],
+    ["introFootBadge", "introFootBadge"],
+    ["navSkills", "navSkills"],
+    ["navEducation", "navEducation"],
+    ["navExperience", "navExperience"],
+    ["navProjects", "navProjects"],
+    ["ctaMailText", "ctaMail"],
+    ["ctaExpText", "ctaExperience"],
+    ["labelLocation", "labelLocation"],
+    ["labelEmail", "labelEmail"],
+    ["labelLinkedIn", "labelLinkedIn"],
+    ["labelPdf", "labelPdf"],
+    ["labelFocus", "labelFocus"],
+    ["profileLinkedinText", "viewProfile"],
+    ["profilePdfText", "download"],
+    ["publicNote", "publicNote"],
+    ["skillsTitle", "skillsTitle"],
+    ["skillsSubtitle", "skillsSubtitle"],
+    ["educationTitle", "educationTitle"],
+    ["educationSubtitle", "educationSubtitle"],
+    ["experienceTitle", "experienceTitle"],
+    ["experienceHint", "experienceHint"],
+    ["projectsTitle", "projectsTitle"],
+    ["projectsSubtitle", "projectsSubtitle"],
+    ["projectsMoreText", "projectsMore"]
+  ];
+
+  pairs.forEach(([id, key]) => {
+    const el = $(`#${id}`);
+    if (el) el.textContent = t(key);
+  });
+
+  const enterGithub = $("#enterGithub");
+  if (enterGithub) enterGithub.textContent = t("enterGithubText");
+
+  updateExpandBtn();
+}
+
+async function fetchSiteJson(lang){
+  const candidates = [
+    `content/site.${lang}.json`,
+    "content/site.json"
+  ];
+
+  for (const path of candidates) {
+    const res = await fetch(path, { cache: "no-store" });
+    if (res.ok) return res.json();
+  }
+
+  throw new Error("Site JSON not found");
+}
+
+function bindExperienceControlsOnce(){
+  if (experienceBound) return;
+  experienceBound = true;
+
+  const acc = $("#experienceAccordion");
+  const btn = $("#expandAllBtn");
+  if (!acc || !btn) return;
+
+  acc.addEventListener("shown.bs.collapse", updateExpandBtn);
+  acc.addEventListener("hidden.bs.collapse", updateExpandBtn);
+
+  btn.addEventListener("click", () => {
+    const collapses = acc.querySelectorAll(".accordion-collapse");
+    const shouldExpand = Array.from(collapses).some(c => !c.classList.contains("show"));
+
+    collapses.forEach(c => {
+      const inst = bootstrap.Collapse.getOrCreateInstance(c, { toggle: false });
+      if (shouldExpand) inst.show();
+      else inst.hide();
+    });
+
+    setTimeout(updateExpandBtn, 80);
+  });
+}
+
+async function loadContent(lang) {
+  const data = await fetchSiteJson(lang);
 
   $("#year").textContent = new Date().getFullYear();
 
@@ -200,10 +485,10 @@ async function loadContent() {
   // hero tags
   const tagsWrap = $("#heroTags");
   tagsWrap.innerHTML = "";
-  data.hero.tags.forEach(t => {
+  data.hero.tags.forEach(tt => {
     const span = document.createElement("span");
     span.className = "tag";
-    span.textContent = t;
+    span.textContent = tt;
     tagsWrap.appendChild(span);
   });
 
@@ -283,22 +568,7 @@ async function loadContent() {
     acc.appendChild(item);
   });
 
-  acc.addEventListener("shown.bs.collapse", updateExpandBtn);
-  acc.addEventListener("hidden.bs.collapse", updateExpandBtn);
-
-  $("#expandAllBtn").addEventListener("click", () => {
-    const collapses = acc.querySelectorAll(".accordion-collapse");
-    const shouldExpand = Array.from(collapses).some(c => !c.classList.contains("show"));
-
-    collapses.forEach(c => {
-      const inst = bootstrap.Collapse.getOrCreateInstance(c, { toggle: false });
-      if (shouldExpand) inst.show();
-      else inst.hide();
-    });
-
-    setTimeout(updateExpandBtn, 80);
-  });
-
+  bindExperienceControlsOnce();
   updateExpandBtn();
 
   // proyectos
@@ -317,30 +587,76 @@ async function loadContent() {
           <p class="text-secondary">${p.description}</p>
           <div class="mt-auto d-flex gap-2">
             ${p.demo ? `<a class="btn btn-sm btn-primary motion-btn" target="_blank" rel="noreferrer" href="${p.demo}">
-              <i class="bi bi-play-circle"></i> Demo</a>` : ""}
+              <i class="bi bi-play-circle"></i> ${t("projectDemo")}</a>` : ""}
             ${p.repo ? `<a class="btn btn-sm btn-outline-secondary motion-btn" target="_blank" rel="noreferrer" href="${p.repo}">
-              <i class="bi bi-code-slash"></i> Repo</a>` : ""}
+              <i class="bi bi-code-slash"></i> ${t("projectRepo")}</a>` : ""}
           </div>
         </div>
       </div>`;
     projGrid.appendChild(col);
   });
 
-  introInit(data);
-  smoothScrollInit();
-  revealInit();
+  // Intro solo la primera vez
+  if (!introPlayed) {
+    introPlayed = true;
+    introInit(data);
+  }
 
   return data;
 }
 
-(function init(){
-  const saved = localStorage.getItem("theme");
-  setTheme(saved || "dark"); // ✅ por defecto oscuro
+function getInitialLang(){
+  const url = new URL(window.location.href);
+  const q = (url.searchParams.get("lang") || "").toLowerCase();
+  const saved = (localStorage.getItem("lang") || "").toLowerCase();
 
-  $("#themeBtn").addEventListener("click", toggleTheme);
+  if (SUPPORTED_LANGS.includes(q)) return q;
+  if (SUPPORTED_LANGS.includes(saved)) return saved;
+  return "en";
+}
 
-  loadContent().catch(err => {
+function setLanguage(lang){
+  if (!SUPPORTED_LANGS.includes(lang)) lang = "en";
+  currentLang = lang;
+
+  localStorage.setItem("lang", lang);
+  document.documentElement.lang = lang;
+
+  setActiveLangButton(lang);
+  setUrlLang(lang);
+  applyStaticTranslations();
+
+  loadContent(lang).catch(err => {
     console.error(err);
-    alert("No se pudo cargar content/site.json");
+    alert(t("alertLoadFail"));
+  });
+}
+
+(function init(){
+  const savedTheme = localStorage.getItem("theme");
+  setTheme(savedTheme || "dark"); // por defecto oscuro
+
+  currentLang = getInitialLang();
+  setActiveLangButton(currentLang);
+  document.documentElement.lang = currentLang;
+
+  // listeners
+  const themeBtn = $("#themeBtn");
+  if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
+
+  document.querySelectorAll(".lang-btn").forEach(b => {
+    b.addEventListener("click", () => setLanguage(b.dataset.lang));
+  });
+
+  smoothScrollInit();
+  revealInit();
+
+  // textos fijos en el idioma actual
+  applyStaticTranslations();
+
+  // carga contenido del idioma actual
+  loadContent(currentLang).catch(err => {
+    console.error(err);
+    alert(t("alertLoadFail"));
   });
 })();
