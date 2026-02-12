@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>San Valentín 💚🎮</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+<link href="./styles.css" rel="stylesheet">
+</link><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet"/></head>
+<body>
+<div aria-hidden="true" class="bg-vines"></div>
+<div aria-hidden="true" class="bg-hearts"></div>
+<!-- 0) Intro: auto 5s -->
+<main class="screen screen--active" id="introScreen">
+<section class="card">
+<div class="badge">
+<i class="bi bi-pc-display"></i><span>Nota rápida</span>
+</div>
+<h1>Mejor en <span class="accent">ordenador</span> 💻</h1>
+<p class="sub">Es más compatible… aja aja 😌</p>
+<div class="hint">
+<i class="bi bi-hourglass-split"></i>
+<span>En 5s pasamos a la siguiente pantalla…</span>
+</div>
+</section>
+</main>
+<!-- 1) Pantalla Sí/No (sin “Quieres ser mi San Valentín”, sin “Pulsa No”) -->
+<main class="screen" id="askScreen">
+<section class="card">
+<div class="badge">
+<i class="bi bi-heart-fill"></i><span>San Valentín</span>
+</div>
+<h1>¿Quieres ser mi <span class="accent">San Valentín</span>?</h1>
+<p class="sub" style="margin-bottom:14px;">Elige…</p>
+<div class="actions">
+<button class="btn btn-yes" disabled="" id="yesBtn">
+<i class="bi bi-heart-fill"></i> Sí 💖
+      </button>
+<button class="btn btn-no" id="noBtn">
+        No 😶
+      </button>
+</div>
+<!-- Sin pistas -->
+<div class="hint" style="margin-top:14px;">
+<i class="bi bi-stars"></i>
+<span id="askHint"></span>
+</div>
+</section>
+</main>
+<!-- 2) Juego -->
+<main class="screen" id="gameScreen">
+<header class="topbar">
+<div class="topbar-left">
+<i class="bi bi-controller"></i>
+<span>Modo juego</span>
+</div>
+<div class="topbar-right"><span class="pill pill--coin" id="coinPill"><i class="bi bi-coin"></i> 0</span>
+<span class="pill" id="progressPill"><i class="bi bi-flag-fill"></i> Misión: 1/4</span>
+</div>
+</header>
+<section class="game-wrap">
+<div class="game-frame" style="padding-bottom: 4px;">
+<canvas aria-label="Juego 2D" height="620" id="gameCanvas" width="1100"></canvas>
+<div class="game-controls-bar">
+<button class="reset-btn" id="resetBtn">
+          🔁 Reiniciar posición
+          </button>
+</div>
+</div>
+<!-- Controles fuera del canvas (no tapa) -->
+<div aria-hidden="true" class="controls-strip" style="padding-top: 10px;">
+<div class="controls-title">Controles</div>
+<div class="controls-grid">
+<div class="controls-row"><span class="key">A</span><span>Izquierda</span></div>
+<div class="controls-row"><span class="key">D</span><span>Derecha</span></div>
+<div class="controls-row"><span class="key">W</span><span>Saltar + burbuja</span></div>
+<div class="controls-row"><span class="key">S</span><span>Agacharse</span></div>
+<div class="controls-row"><span class="key">E</span><span>Interactuar (foto)</span></div>
+</div>
+</div>
+<div aria-live="polite" class="hud-hint" id="hudHint"></div>
+</section>
+</main>
+<!-- 3) Overlay misión foto -->
+<div aria-hidden="true" class="overlay" id="photoOverlay">
+<div class="overlay-card">
+<div class="overlay-media">
+<img alt="Foto misión" id="overlayImg" src=""/>
+<div aria-hidden="true" class="ivy-frame"></div>
+</div>
+<aside class="overlay-text">
+<h2 id="overlayTitle">Misión</h2>
+<p id="overlayCaption"></p>
+<button class="back" id="overlayBackBtn">
+<i class="bi bi-arrow-down-circle-fill"></i>
+<span>Volver</span>
+</button>
+</aside>
+</div>
+</div>
+<!-- 4) Final -->
+<div aria-hidden="true" class="ending" id="endingScreen">
+<div class="ending-inner">
+<div class="ending-fade"></div>
+<div class="ending-text" id="endingText"></div>
+</div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
