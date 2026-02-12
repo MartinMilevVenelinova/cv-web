@@ -347,10 +347,10 @@ const platforms = [
 
 // Decoración (no colisiona): monedas y mini arbustos/colinas extra
 const coins = [
-  { x: 150, y: WORLD.h - 120 }, { x: 190, y: WORLD.h - 140 }, { x: 230, y: WORLD.h - 160 },
+  { x: 150, y: WORLD.h - 120 }, { x: 190, y: WORLD.h - 140 }, { x: 240, y: WORLD.h - 170 },
   { x: 335, y: WORLD.h - 250 }, { x: 407, y: WORLD.h - 250 }, { x: 479, y: WORLD.h - 250 },
   { x: 660, y: WORLD.h - 210 }, { x: 770, y: WORLD.h - 270 },
-  { x: 930, y: WORLD.h - 190 }, { x: 990, y: WORLD.h - 190 },
+  { x: 830, y: WORLD.h - 190 }, { x: 890, y: WORLD.h - 190 },
 ];
 
 const bushes = [
