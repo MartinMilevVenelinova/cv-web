@@ -1,35 +1,37 @@
 {
   "skills": [
     {
-      "title": "Sistemas y Administración",
-      "description": "Gestión de usuarios, accesos y soporte en entornos corporativos.",
+      "title": "Análisis de datos y reporting",
+      "description": "Análisis de datos operativos, construcción de reportes y seguimiento de métricas (SLA, incidencias, rendimiento).",
       "items": [
-        "Active Directory",
+        "SQL",
+        "Power BI",
+        "Excel",
+        "Python (pandas)",
+        "KPIs & SLA",
+        "Análisis de incidencias"
+      ]
+    },
+    {
+      "title": "Operaciones IT y sistemas",
+      "description": "Gestión operativa en entornos corporativos: usuarios, accesos, incidencias y soporte técnico avanzado.",
+      "items": [
+        "AD",
         "Office 365",
-        "Azure (permisos)",
+        "Gestión de accesos",
         "Soporte remoto",
-        "Gestión de accesos"
+        "Entornos corporativos"
       ]
     },
     {
       "title": "Redes y Conectividad",
-      "description": "Soporte en conectividad, configuración y diagnóstico.",
+      "description": "Diagnóstico y soporte en redes, conectividad y entornos de trabajo distribuidos.",
       "items": [
         "VPN",
         "DNS",
         "Proxy",
         "IP fija / variable",
-        "Impresoras y escáneres"
-      ]
-    },
-    {
-      "title": "Bases de datos",
-      "description": "BBDD relacionales y NoSQL para soporte, consultas y reporting.",
-      "items": [
-        "SQL (general)",
-        "MySQL",
-        "PostgreSQL",
-        "MongoDB"
+        "Diagnóstico de conectividad"
       ]
     },
     {
@@ -39,7 +41,6 @@
         "FARO",
         "Escalado N2/N3",
         "Odigo (calidad)",
-        "Power BI",
         "PowerPoint"
       ]
     },
@@ -47,14 +48,11 @@
       "title": "Desarrollo (base técnica)",
       "description": "Base sólida en desarrollo y consumo de APIs.",
       "items": [
-        "Java",
-        "Spring Boot",
+        "Python",
         "APIs REST",
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "JavaScript",
-        "Python"
+        "Spring Boot",
+        "HTML / CSS",
+        "JavaScript"
       ]
     },
     {
@@ -62,9 +60,8 @@
       "description": "Herramientas usadas en proyectos y operativa diaria.",
       "items": [
         "Jenkins (operativa O365)",
-        "Excel (análisis)",
-        "Consultas SQL (reporting)",
-        "Nagios",
+        "Tordera AS400",
+        "Alertas Nagios",
         "FileZilla"
       ]
     }
@@ -88,36 +85,27 @@
   ],
   "experience": [
     {
-      "position": "Técnico de Soporte Avanzado – Colectivos VIP",
+      "position": "Técnico de Soporte Avanzado | Análisis de Datos Operativos",
       "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
       "period": "Dic 2024 – Actualidad",
       "bullets": [
-        "Soporte remoto especializado a usuarios VIP (letrados, magistrados, jueces y fiscales) con atención exclusiva.",
-        "Administración de usuarios y permisos: desbloqueos, accesos y gestión por perfiles en aplicaciones corporativas (gestor, responsable, etc.).",
-        "Soporte integral de puesto: impresoras, multifunciones, escáneres, carpetas compartidas y aplicaciones de trabajo.",
-        "Gestión de VPN, teletrabajo, incidencias de correo y autenticación."
+        "Análisis de datos operativos de incidencias en entornos corporativos críticos (Comunidad de Madrid).",
+        "Monitorización y seguimiento de SLA, tiempos de resolución y volumen de tickets mediante reporting en Excel y Power BI.",
+        "Elaboración de informes mensuales y anuales de productividad para equipo de 12 agentes (~300 tickets diarios).",
+        "Identificación de patrones de incidencias y cuellos de botella operativos para optimizar procesos y tiempos de resolución.",
+        "Gestión de incidencias complejas, accesos y soporte técnico en entornos corporativos (VIP)."
       ]
     },
     {
-      "position": "Soporte a Bomberos (servicio adicional)",
+      "position": "Coordinación Operativa y Análisis de Servicio (12 agentes)",
       "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
       "period": "2025 – Actualidad",
       "bullets": [
-        "Soporte a sistemas y aplicativos del cuerpo: SITREM y APPB (móviles).",
-        "Incidencias en parques: caídas de red, ethernet, proxy, subredes y conectividad general.",
-        "Soporte asociado a telefonía móvil, comunicaciones y elementos del servicio (según parque/entorno)."
-      ]
-    },
-    {
-      "position": "Coordinación de equipo (11 agentes) – Calidad y Reporting",
-      "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
-      "period": "2025 – Actualidad",
-      "bullets": [
-        "Coordinación operativa de 11 agentes: apoyo, organización y seguimiento de tareas.",
-        "Escucha y valoración de llamadas en Odigo: control de calidad y propuestas de mejora.",
-        "Informes y estadísticas del servicio con Power BI y presentaciones en PowerPoint.",
-        "Análisis de datos de ticketing (FARO) con volúmenes grandes (10.000+ registros), consolidación y comparativas.",
-        "Consultas SQL por cuenta propia para acelerar el reporting y sacar indicadores útiles."
+        "Coordinación operativa de equipo de 12 agentes: planificación, seguimiento y mejora del rendimiento.",
+        "Análisis de calidad del servicio mediante escucha de llamadas y evaluación de procesos.",
+        "Generación de informes y dashboards en Power BI para seguimiento de métricas operativas.",
+        "Análisis de grandes volúmenes de datos de ticketing (FARO, +10.000 registros) para reporting y comparativas.",
+        "Desarrollo de consultas SQL para optimizar el reporting y obtener indicadores clave del servicio."
       ]
     },
     {
@@ -131,7 +119,7 @@
       ]
     },
     {
-      "position": "Técnico IT / Responsable IT de Almacén",
+      "position": "Técnico IT / Responsable IT Operativa Logística y Sistemas",
       "company": "Logisfashion – Ontígola (operativa Inditex)",
       "period": "Jul 2021 – Feb 2023",
       "bullets": [
@@ -158,47 +146,48 @@
   "brandName": "Martin-Milev.dev",
   "cvPdfLabel": "CV Martin Milev (PDF)",
   "location": "Madrid, España",
-  "role": "Técnico de Sistemas y Soporte Avanzado | Windows / AD / BBDD",
+  "role": "Data Analyst Junior | SQL · Python · Power BI ",
   "links": {
     "email": "martin.milev.vene@gmail.com",
     "github": "https://github.com/MartinMilevVenelinova",
     "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
   },
   "projects": [
-    {
-      "name": "Web CV editable (Decap CMS + Netlify)",
-      "type": "Web / Portfolio",
-      "description": "CV online público y editable sin tocar código, con panel /admin y contenido en JSON (GitHub + despliegue automático).",
-      "demo": "",
-      "repo": "https://github.com/MartinMilevVenelinova/cv-web"
-    },
-    {
-      "name": "Procedimientos y documentación técnica (plantillas)",
-      "type": "Documentación",
-      "description": "Plantillas de instalación/actualización, checklist de migraciones y guías de troubleshooting orientadas a sistemas.",
-      "demo": "",
-      "repo": ""
-    },
-    {
-      "name": "Lab SQL (consultas y ejercicios)",
-      "type": "BBDD",
-      "description": "Colección de consultas SQL y casos prácticos (base para SQL Server/Oracle).",
-      "demo": "",
-      "repo": ""
-    }
+  {
+    "name": "Sistema de gestión de perfil profesional (CMS + Netlify)",
+    "type": "Web / Portfolio",
+    "description": "Plataforma web para gestión de contenido profesional mediante estructura desacoplada (JSON + frontend), con panel de administración y despliegue automático. Diseñada como sistema escalable similar a un CMS ligero.",
+    "demo": "",
+    "repo": "https://github.com/MartinMilevVenelinova/cv-web"
+  },
+  {
+    "name": "Plataforma de análisis de operaciones IT y SLA",
+    "type": "Data Analytics",
+    "description": "Sistema de análisis de datos orientado a monitorizar operaciones IT en entornos corporativos, incluyendo volumen de incidencias, tiempos de resolución y métricas SLA mediante SQL, Python y visualización de datos.",
+    "state": "EN CURSO",
+    "demo": "",
+    "repo": ""
+  },
+  {
+    "name": "Copiloto de conocimiento técnico basado en IA (RAG)",
+    "type": "Inteligencia Artificial",
+    "description": "Sistema inteligente para consulta de documentación técnica mediante modelos de lenguaje y Retrieval-Augmented Generation (RAG), enfocado en mejorar el acceso a conocimiento y la eficiencia operativa en entornos IT.",
+    "demo": "",
+    "repo": ""
+  }
   ],
   "hero": {
-    "badge": "100% remoto · Disponibilidad geográfica y horaria",
-    "title": "Sistemas, soporte avanzado y bases de datos",
-    "subtitle": "Trabajo en entornos corporativos críticos resolviendo incidencias complejas, gestionando usuarios y permisos, y dando soporte remoto. Formación en SMR, DAM y Máster en Big Data e Inteligencia Artificial.",
+    "badge": "100% remoto, hibrido, presencial ·  Disponibilidad geográfica y horaria",
+    "title": "Data Analyst con base en operaciones y sistemas IT",
+    "subtitle": "Análisis de operaciones IT en entornos corporativos, trabajando con incidencias, SLA y métricas de servicio para mejorar la eficiencia operativa. Experiencia en reporting, consultas SQL y automatización básica con Python, con transición activa hacia Data Analytics y Business Intelligence.",
     "tags": [
-      "Windows / Active Directory",
-      "Office 365 / MFA",
-      "SQL & BBDD",
-      "VPN · DNS · Proxy",
-      "Documentación técnica"
+      "SQL & Reporting",
+      "Power BI / Excel",
+      "Python (pandas)",
+      "Análisis de incidencias & SLA",
+      "Entornos corporativos IT"
     ]
   },
-  "stackLine": "Windows • Active Directory • O365 • SQL • Redes • Documentación técnica",
+  "stackLine": "SQL • Reporting • SLA • Power BI • Excel • Python",
   "cvPdf": "/assets/uploads/CV MARTIN MILEV.pdf"
 }
