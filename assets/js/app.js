@@ -15,7 +15,7 @@ const I18N = {
 
     introKicker: "ONLINE RESUME",
     introTitle: "Loading CV…",
-    introSub: "Technical profile focused on systems, advanced support and databases.",
+    introSub: "Data Analyst with a background in IT Operations and Systems.",
     introLoadingBtn: "Loading…",
     introEntering: "Entering…",
     enterGithubText: "View GitHub",
@@ -66,7 +66,7 @@ const I18N = {
 
     introKicker: "CURRÍCULUM ONLINE",
     introTitle: "Cargando CV…",
-    introSub: "Perfil técnico orientado a sistemas, soporte avanzado y bases de datos.",
+    introSub: "Data Analyst con base en operaciones y sistemas IT.",
     introLoadingBtn: "Cargando…",
     introEntering: "Entrando…",
     enterGithubText: "Ver GitHub",
@@ -117,7 +117,7 @@ const I18N = {
 
     introKicker: "ONLINE-LEBENSLAUF",
     introTitle: "Lebenslauf wird geladen…",
-    introSub: "Technisches Profil mit Fokus auf Systeme, Advanced Support und Datenbanken.",
+    introSub: "Data Analyst mit Hintergrund in IT-Operations und Systemen.",
     introLoadingBtn: "Laden…",
     introEntering: "Öffnen…",
     enterGithubText: "GitHub ansehen",
