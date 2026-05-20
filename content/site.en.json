@@ -2,52 +2,50 @@
   "skills": [
     {
       "title": "Data Analysis & Reporting",
-      "description": "Operational data analysis, reporting and monitoring of key metrics (SLA, incidents, performance).",
+      "description": "Operational data analysis, report building and metrics tracking (SLA, incidents, performance).",
       "items": [
         "SQL",
         "Power BI",
         "Excel",
         "Python (pandas)",
         "KPIs & SLA",
-        "Incident analysis"
+        "Incident Analysis"
       ]
     },
     {
       "title": "IT Operations & Systems",
-      "description": "Operational management in corporate environments: users, access control, incidents and advanced technical support.",
+      "description": "Operational management in corporate environments: users, access, incidents and advanced technical support.",
       "items": [
-        "Active Directory",
-        "Microsoft 365",
-        "Access management",
-        "Remote support",
-        "Corporate environments"
+        "AD",
+        "Office 365",
+        "Access Management",
+        "Remote Support",
+        "Corporate Environments"
       ]
     },
     {
-      "title": "Networking & Connectivity",
-      "description": "Diagnosis and support of network infrastructure and distributed environments.",
+      "title": "Networks & Connectivity",
+      "description": "Diagnosis and support for networks, connectivity and distributed work environments.",
       "items": [
         "VPN",
         "DNS",
         "Proxy",
-        "IP addressing",
-        "Network troubleshooting"
+        "Static / Dynamic IP",
+        "Connectivity Diagnosis"
       ]
     },
     {
       "title": "Incident Management & Operations",
-      "description": "Ticketing, escalation, service quality and operational reporting.",
+      "description": "Ticketing, escalation, service quality and reporting.",
       "items": [
         "FARO",
-        "N2/N3 escalation",
-        "Odigo (quality)",
-        "Power BI",
+        "N2/N3 Escalation",
         "PowerPoint"
       ]
     },
     {
-      "title": "Development (Technical Foundation)",
-      "description": "Solid foundation in development and API integration.",
+      "title": "Development (Technical Base)",
+      "description": "Solid foundation in development and API consumption.",
       "items": [
         "Python",
         "REST APIs",
@@ -57,90 +55,77 @@
       ]
     },
     {
-      "title": "Tools & Automation",
-      "description": "Tools used in daily operations and technical projects.",
+      "title": "Tools (Plus)",
+      "description": "Tools used in projects and daily operations.",
       "items": [
-        "Jenkins (M365 ops)",
-        "AS400 (Tordera)",
-        "Nagios monitoring",
+        "Jenkins (O365 operations)",
+        "Tordera AS400",
+        "Nagios Alerts",
         "FileZilla"
       ]
     }
   ],
-
   "education": [
     {
-      "title": "VET (Intermediate) — Microcomputer Systems & Networks (SMR)",
+      "title": "Vocational Degree – Computer Systems & Networks (SMR)",
       "center": "",
       "period": ""
     },
     {
-      "title": "VET (Higher) — Multiplatform Application Development (DAM)",
+      "title": "Higher Degree – Multiplatform Application Development (DAM)",
       "center": "",
       "period": ""
     },
     {
-      "title": "Master's — Big Data Analytics & Generative Artificial Intelligence",
+      "title": "Master's – Big Data Analytics & Generative Artificial Intelligence",
       "center": "",
       "period": ""
     }
   ],
-
   "experience": [
     {
-      "position": "Advanced Support Technician | Operational Data Analysis",
-      "company": "Madrid Digital — AYESA ATECH SOLUTIONS",
+      "position": "BI & Data Analyst – Freelance",
+      "company": "Freelance / Independent Professional Project",
+      "period": "2025 – Present",
+      "bullets": [
+        "Built Power BI dashboards to track operational KPIs and service performance metrics in IT environments.",
+        "Analyzed ticketing and incident data (+10,000 records) using SQL queries to identify patterns, trends and bottlenecks.",
+        "Cleaned, transformed and validated data using Python (pandas) from CSV and Excel sources.",
+        "Monitored SLA compliance and resolution times through regular reporting to support data-driven decisions.",
+        "Partially automated reporting processes to reduce time spent on generating operational reports."
+      ]
+    },
+    {
+      "position": "Advanced Support Technician",
+      "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
       "period": "Dec 2024 – Present",
       "bullets": [
-        "Operational data analysis of incidents in critical corporate environments (Madrid public sector).",
-        "Monitoring SLA, resolution times and ticket volume through reporting in Excel and Power BI.",
-        "Monthly and yearly productivity reports for a team of 12 agents (~300 tickets/day).",
-        "Identification of incident patterns and operational bottlenecks to improve resolution times.",
-        "Management of complex incidents, access control and VIP user support."
+        "Advanced technical support in critical corporate environments of the Community of Madrid, including VIP users.",
+        "Management and resolution of complex incidents related to access, corporate applications and internal tools.",
+        "Incident tracking and SLA compliance monitoring using the FARO ticketing platform.",
+        "Collaboration with technical teams on escalation and resolution of high-priority issues."
       ]
     },
     {
-      "position": "Operations Coordination & Service Analysis (12 agents)",
-      "company": "Madrid Digital — AYESA ATECH SOLUTIONS",
-      "period": "2025 – Present",
-      "bullets": [
-        "Operational coordination of a 12-agent team: planning, tracking and performance improvement.",
-        "Service quality analysis through call monitoring and process evaluation.",
-        "Development of reports and dashboards in Power BI for operational metrics.",
-        "Analysis of large ticketing datasets (FARO, 10,000+ records) for reporting and comparisons.",
-        "Custom SQL queries to optimize reporting and extract key service indicators."
-      ]
-    },
-    {
-      "position": "IT Support in Critical Operations (Fire Department)",
-      "company": "Madrid Digital — AYESA ATECH SOLUTIONS",
-      "period": "2025 – Present",
-      "bullets": [
-        "Support for critical systems and applications (SITREM, APPB mobile).",
-        "Resolution of network and connectivity incidents (proxy, subnets, communications).",
-        "Technical support in environments with direct impact on emergency operations."
-      ]
-    },
-    {
-      "position": "Advanced Support Technician | Corporate Systems",
-      "company": "Madrid Digital — Grupo Solutio (DXC)",
+      "position": "Advanced Support Technician / Systems (HCORE)",
+      "company": "Madrid Digital – Grupo Solutio (DXC)",
       "period": "Oct 2023 – Dec 2024",
       "bullets": [
-        "Advanced support in Microsoft corporate environments (M365, VPN, proxy).",
-        "Incident management and escalation based on criticality.",
-        "Basic analysis of recurring incidents and coordination with technical teams."
+        "Advanced remote support for VPN, proxy, remote work and Microsoft corporate environments.",
+        "Office 365: mailbox delegation and expansion, and MFA reset using Jenkins.",
+        "Incident management using FARO ticketing and escalation based on criticality."
       ]
     },
     {
-      "position": "IT Technician | Logistics Operations & Systems",
-      "company": "Logisfashion — Ontígola (Inditex operations)",
+      "position": "IT Technician / IT Operations & Systems Lead",
+      "company": "Logisfashion – Ontígola (Inditex operations)",
       "period": "Jul 2021 – Feb 2023",
       "bullets": [
-        "IT support in logistics environment managing systems, devices and operations.",
-        "RFID systems and mobile device management (deployment, support, maintenance).",
-        "Access and permissions management in Azure and corporate ticketing systems.",
-        "Coordination with Inditex on RFID tunnels and product security projects.",
-        "Training and onboarding of new team members."
+        "Full systems support in warehouse and offices: equipment, peripherals, incidents and daily operations.",
+        "Management of mobile devices and RFID equipment (configuration, support and maintenance).",
+        "Access and permissions management in Azure and use of corporate ticketing tools.",
+        "AS400 system support (Tordera environment) and related operations.",
+        "Coordination with Inditex on RFID tunnels and product alarm projects."
       ]
     },
     {
@@ -148,61 +133,57 @@
       "company": "BioErgon, UEx",
       "period": "Feb 2023 – Jun 2023",
       "bullets": [
-        "Development of a full-stack application for data analysis (Java / Spring Boot / HTML / CSS).",
-        "MongoDB database design and implementation."
+        "Back-end development in Java / Spring Boot and front-end with HTML, CSS and Bootstrap.",
+        "Design and use of MongoDB database for data collection and management."
       ]
     }
   ],
-
+  "name": "Martin Milev Venelinova",
+  "brandName": "Martin-Milev.dev",
+  "cvPdfLabel": "CV Martin Milev (PDF)",
+  "location": "Madrid, Spain",
+  "role": "Junior Data Analyst | SQL · Python · Power BI",
+  "links": {
+    "email": "martin.milev.vene@gmail.com",
+    "github": "https://github.com/MartinMilevVenelinova",
+    "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
+  },
   "projects": [
     {
       "name": "Professional Profile Management System (CMS + Netlify)",
       "type": "Web / Portfolio",
-      "description": "Web platform for managing professional content using a decoupled architecture (JSON + frontend), with admin panel and automated deployment. Designed as a lightweight CMS-like system.",
+      "description": "Web platform for managing professional content using a decoupled structure (JSON + frontend), with an admin panel and automatic deployment. Designed as a scalable lightweight CMS-like system.",
       "demo": "",
       "repo": "https://github.com/MartinMilevVenelinova/cv-web"
     },
     {
       "name": "IT Operations & SLA Analytics Platform",
       "type": "Data Analytics",
-      "description": "Data analysis system focused on monitoring IT operations, including incident volume, resolution times and SLA metrics using SQL, Python and data visualization.",
+      "description": "Data analytics system designed to monitor IT operations in corporate environments, including incident volume, resolution times and SLA metrics using SQL, Python and data visualization.",
+      "state": "IN PROGRESS",
       "demo": "",
       "repo": ""
     },
     {
-      "name": "AI Technical Knowledge Copilot (RAG)",
+      "name": "AI-Powered Technical Knowledge Copilot (RAG)",
       "type": "Artificial Intelligence",
-      "description": "AI-based system for querying technical documentation using Retrieval-Augmented Generation (RAG), designed to improve knowledge access and operational efficiency in IT environments.",
+      "description": "Intelligent system for querying technical documentation using language models and Retrieval-Augmented Generation (RAG), focused on improving knowledge access and operational efficiency in IT environments.",
       "demo": "",
       "repo": ""
     }
   ],
-
   "hero": {
-    "badge": "Remote · Hybrid · On-site · Flexible availability",
-    "title": "Data Analyst with a background in IT Operations and Systems",
-    "subtitle": "Analysis of IT operations in corporate environments, working with incidents, SLA and service metrics to improve operational efficiency. Experience in reporting, SQL queries and Python-based automation, applying Data Analytics and Business Intelligence practices.",
+    "badge": "100% remote, hybrid, on-site · Geographic and schedule availability",
+    "title": "Data Analyst with a background in IT Operations & Systems",
+    "subtitle": "Analyzing IT operations in corporate environments, working with incidents, SLA and service metrics to improve operational efficiency. Experience in reporting, SQL queries and basic Python automation, actively transitioning into Data Analytics and Business Intelligence.",
     "tags": [
       "SQL & Reporting",
       "Power BI / Excel",
       "Python (pandas)",
       "Incident & SLA Analysis",
-      "Corporate IT environments"
+      "Corporate IT Environments"
     ]
   },
-
-  "name": "Martin Milev Venelinova",
-  "brandName": "Martin-Milev.dev",
-  "role": "Data Analyst | SQL · Python · Power BI",
-  "location": "Madrid, Spain",
-
-  "links": {
-    "email": "martin.milev.vene@gmail.com",
-    "github": "https://github.com/MartinMilevVenelinova",
-    "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
-  },
-
-  "cvPdfLabel": "Martin Milev CV (PDF)",
   "stackLine": "SQL • Reporting • SLA • Power BI • Excel • Python",
   "cvPdf": "/assets/uploads/CV MARTIN MILEV.pdf"
 }

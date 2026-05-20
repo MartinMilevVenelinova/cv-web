@@ -2,7 +2,7 @@
   "skills": [
     {
       "title": "Datenanalyse & Reporting",
-      "description": "Analyse operativer Daten, Erstellung von Reports und Überwachung zentraler Kennzahlen (SLA, Incidents, Performance).",
+      "description": "Operative Datenanalyse, Berichtserstellung und Metriken-Tracking (SLA, Vorfälle, Leistung).",
       "items": [
         "SQL",
         "Power BI",
@@ -13,141 +13,128 @@
       ]
     },
     {
-      "title": "IT-Operations & Systeme",
-      "description": "Operative Arbeit in Unternehmensumgebungen: Benutzer, Zugriffe, Incidents und technischer Support.",
+      "title": "IT-Betrieb & Systeme",
+      "description": "Operative Verwaltung in Unternehmensumgebungen: Benutzer, Zugriffe, Vorfälle und fortgeschrittener technischer Support.",
       "items": [
-        "Active Directory",
-        "Microsoft 365",
-        "Zugriffsmanagement",
+        "AD",
+        "Office 365",
+        "Zugangsverwaltung",
         "Remote-Support",
         "Unternehmensumgebungen"
       ]
     },
     {
       "title": "Netzwerke & Konnektivität",
-      "description": "Diagnose und Support von Netzwerken, Konnektivität und verteilten IT-Umgebungen.",
+      "description": "Diagnose und Support für Netzwerke, Konnektivität und verteilte Arbeitsumgebungen.",
       "items": [
         "VPN",
         "DNS",
         "Proxy",
-        "IP-Adressierung",
-        "Netzwerkdiagnose"
+        "Statische / dynamische IP",
+        "Konnektivitätsdiagnose"
       ]
     },
     {
-      "title": "Incident Management & Betrieb",
-      "description": "Ticketing, Eskalation, Servicequalität und operatives Reporting.",
+      "title": "Incident-Management & Betrieb",
+      "description": "Ticketing, Eskalation, Servicequalität und Reporting.",
       "items": [
         "FARO",
         "N2/N3-Eskalation",
-        "Odigo (Qualität)",
-        "Power BI",
         "PowerPoint"
       ]
     },
     {
-      "title": "Entwicklung (Technische Basis)",
-      "description": "Solide Grundlage in Softwareentwicklung und API-Integration.",
+      "title": "Entwicklung (technische Basis)",
+      "description": "Solide Grundlagen in Entwicklung und API-Integration.",
       "items": [
         "Python",
-        "REST-APIs",
+        "REST APIs",
         "Spring Boot",
         "HTML / CSS",
         "JavaScript"
       ]
     },
     {
-      "title": "Tools & Automatisierung",
-      "description": "Werkzeuge für den täglichen Betrieb und technische Projekte.",
+      "title": "Tools (Plus)",
+      "description": "Werkzeuge aus Projekten und dem täglichen Betrieb.",
       "items": [
-        "Jenkins (M365-Betrieb)",
-        "AS400 (Tordera)",
-        "Nagios-Monitoring",
+        "Jenkins (O365-Betrieb)",
+        "Tordera AS400",
+        "Nagios-Alerts",
         "FileZilla"
       ]
     }
   ],
   "education": [
     {
-      "title": "Berufsausbildung (mittlerer Abschluss) — Mikroinformatiksysteme und Netzwerke (SMR)",
+      "title": "Berufsausbildung – Mikroinformatik & Netzwerke (SMR)",
       "center": "",
       "period": ""
     },
     {
-      "title": "Berufsausbildung (höherer Abschluss) — Entwicklung plattformübergreifender Anwendungen (DAM)",
+      "title": "Höhere Berufsausbildung – Multiplattform-Anwendungsentwicklung (DAM)",
       "center": "",
       "period": ""
     },
     {
-      "title": "Master — Big Data Analytics & Generative Künstliche Intelligenz",
+      "title": "Master – Big Data Analytics & Generative Künstliche Intelligenz",
       "center": "",
       "period": ""
     }
   ],
   "experience": [
     {
-      "position": "Techniker für Advanced Support | Operative Datenanalyse",
-      "company": "Madrid Digital — AYESA ATECH SOLUTIONS",
-      "period": "Dez 2024 – Heute",
-      "bullets": [
-        "Analyse operativer Incident-Daten in kritischen Unternehmensumgebungen des öffentlichen Sektors in Madrid.",
-        "Überwachung von SLA, Lösungszeiten und Ticketvolumen durch Reporting in Excel und Power BI.",
-        "Erstellung monatlicher und jährlicher Produktivitätsberichte für ein Team von 12 Mitarbeitenden (~300 Tickets pro Tag).",
-        "Identifikation von Incident-Mustern und operativen Engpässen zur Optimierung von Prozessen und Lösungszeiten.",
-        "Bearbeitung komplexer Incidents, Zugriffsverwaltung und technischer Support in Unternehmensumgebungen (VIP)."
-      ]
-    },
-    {
-      "position": "Operative Koordination & Serviceanalyse (12 Mitarbeitende)",
-      "company": "Madrid Digital — AYESA ATECH SOLUTIONS",
+      "position": "BI & Data Analyst – Freiberuflich",
+      "company": "Freiberuflich / Eigenständiges Berufsprojekt",
       "period": "2025 – Heute",
       "bullets": [
-        "Operative Koordination eines Teams von 12 Mitarbeitenden: Planung, Nachverfolgung und Leistungsverbesserung.",
-        "Analyse der Servicequalität durch Call-Monitoring und Prozessbewertung.",
-        "Erstellung von Berichten und Dashboards in Power BI zur Überwachung operativer Kennzahlen.",
-        "Analyse großer Ticketing-Datenmengen (FARO, 10.000+ Datensätze) für Reporting und Vergleiche.",
-        "Entwicklung eigener SQL-Abfragen zur Optimierung des Reportings und Ableitung relevanter Servicekennzahlen."
+        "Entwicklung von Power BI-Dashboards zur Visualisierung operativer KPIs und Servicekennzahlen in IT-Umgebungen.",
+        "Analyse von Ticketing- und Incident-Daten (+10.000 Datensätze) mittels SQL-Abfragen zur Identifikation von Mustern, Trends und Engpässen.",
+        "Bereinigung, Transformation und Validierung von Daten mit Python (pandas) aus CSV- und Excel-Quellen.",
+        "Überwachung der SLA-Einhaltung und Lösungszeiten durch regelmäßiges Reporting zur Entscheidungsunterstützung.",
+        "Teilautomatisierung von Reporting-Prozessen zur Reduzierung des Zeitaufwands für operative Berichte."
       ]
     },
     {
-      "position": "IT-Support in kritischen Einsatzumgebungen (Feuerwehr)",
-      "company": "Madrid Digital — AYESA ATECH SOLUTIONS",
-      "period": "2025 – Heute",
+      "position": "Advanced Support Techniker",
+      "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
+      "period": "Dez. 2024 – Heute",
       "bullets": [
-        "Support für kritische Systeme und Anwendungen (SITREM, APPB Mobile).",
-        "Behebung von Netzwerk- und Konnektivitätsproblemen (Proxy, Subnetze, Kommunikation).",
-        "Technischer Support in Umgebungen mit direktem Einfluss auf Einsatz- und Notfallabläufe."
+        "Fortgeschrittener technischer Support in kritischen Unternehmensumgebungen der Comunidad de Madrid, einschließlich VIP-Nutzern.",
+        "Verwaltung und Lösung komplexer Vorfälle im Bereich Zugriffe, Unternehmensanwendungen und interne Tools.",
+        "Incident-Tracking und SLA-Überwachung über die FARO-Ticketing-Plattform.",
+        "Zusammenarbeit mit technischen Teams bei der Eskalation und Lösung hochkritischer Probleme."
       ]
     },
     {
-      "position": "Techniker für Advanced Support | Unternehmenssysteme",
-      "company": "Madrid Digital — Grupo Solutio (DXC)",
-      "period": "Okt 2023 – Dez 2024",
+      "position": "Advanced Support Techniker / Systeme (HCORE)",
+      "company": "Madrid Digital – Grupo Solutio (DXC)",
+      "period": "Okt. 2023 – Dez. 2024",
       "bullets": [
-        "Technischer Support in Microsoft-Unternehmensumgebungen (M365, VPN, Proxy).",
-        "Bearbeitung und Eskalation von Incidents je nach Kritikalität.",
-        "Grundlegende Analyse wiederkehrender Incidents und Abstimmung mit technischen Teams."
+        "Fortgeschrittener Remote-Support für VPN, Proxy, Homeoffice und Microsoft-Unternehmensumgebungen.",
+        "Office 365: Postfachdelegierung und -erweiterung sowie MFA-Reset mit Jenkins.",
+        "Incident-Management über FARO-Ticketing und Eskalation nach Kritikalität."
       ]
     },
     {
-      "position": "IT-Techniker | Logistikbetrieb & Systeme",
-      "company": "Logisfashion — Ontígola (Inditex-Betrieb)",
-      "period": "Jul 2021 – Feb 2023",
+      "position": "IT-Techniker / IT-Betriebsverantwortlicher Logistik & Systeme",
+      "company": "Logisfashion – Ontígola (Inditex-Betrieb)",
+      "period": "Jul. 2021 – Feb. 2023",
       "bullets": [
-        "IT-Support in einem Logistikumfeld mit Verantwortung für Systeme, Geräte und betriebliche Abläufe.",
-        "Verwaltung von RFID-Systemen und mobilen Geräten (Bereitstellung, Support, Wartung).",
-        "Zugriffs- und Berechtigungsverwaltung in Azure sowie Arbeit mit unternehmensweiten Ticketing-Systemen.",
-        "Abstimmung mit Inditex bei RFID-Tunneln und Projekten im Bereich Produktsicherheit.",
-        "Einarbeitung und Schulung neuer Teammitglieder bei Teamerweiterungen."
+        "Vollständiger Systemsupport in Lager und Büros: Geräte, Peripherie, Vorfälle und Tagesbetrieb.",
+        "Verwaltung von Mobilgeräten und RFID-Geräten (Konfiguration, Support und Wartung).",
+        "Zugriffs- und Rechteverwaltung in Azure sowie Nutzung von Unternehmens-Ticketing-Tools.",
+        "AS400-Systemsupport (Tordera-Umgebung) und damit verbundene Abläufe.",
+        "Koordination mit Inditex bei RFID-Tunneln und Projekten zu Produktsicherheitssystemen."
       ]
     },
     {
       "position": "Full-Stack-Entwickler (Praktikum)",
       "company": "BioErgon, UEx",
-      "period": "Feb 2023 – Jun 2023",
+      "period": "Feb. 2023 – Jun. 2023",
       "bullets": [
-        "Entwicklung einer Full-Stack-Anwendung für Datenanalyse (Java / Spring Boot / HTML / CSS).",
-        "Entwurf und Implementierung einer MongoDB-Datenbank."
+        "Back-End-Entwicklung in Java / Spring Boot und Front-End mit HTML, CSS und Bootstrap.",
+        "Design und Einsatz einer MongoDB-Datenbank zur Datenerfassung und -verwaltung."
       ]
     }
   ],
@@ -155,7 +142,7 @@
   "brandName": "Martin-Milev.dev",
   "cvPdfLabel": "Lebenslauf Martin Milev (PDF)",
   "location": "Madrid, Spanien",
-  "role": "Data Analyst | SQL · Python · Power BI",
+  "role": "Junior Data Analyst | SQL · Python · Power BI",
   "links": {
     "email": "martin.milev.vene@gmail.com",
     "github": "https://github.com/MartinMilevVenelinova",
@@ -163,37 +150,38 @@
   },
   "projects": [
     {
-      "name": "System zur Verwaltung professioneller Inhalte (CMS + Netlify)",
+      "name": "Berufliches Profilverwaltungssystem (CMS + Netlify)",
       "type": "Web / Portfolio",
-      "description": "Webplattform zur Verwaltung professioneller Inhalte mit entkoppelter Architektur (JSON + Frontend), inklusive Admin-Panel und automatischem Deployment. Entwickelt als leichtgewichtiges CMS-ähnliches System.",
+      "description": "Webplattform zur Verwaltung beruflicher Inhalte über eine entkoppelte Struktur (JSON + Frontend), mit Administrationspanel und automatischem Deployment. Als skalierbares, CMS-ähnliches Leichtsystem konzipiert.",
       "demo": "",
       "repo": "https://github.com/MartinMilevVenelinova/cv-web"
     },
     {
-      "name": "Plattform zur Analyse von IT-Operationen und SLA",
+      "name": "IT-Betrieb & SLA-Analyseplattform",
       "type": "Data Analytics",
-      "description": "Datenanalyse-System zur Überwachung von IT-Operationen, einschließlich Incident-Volumen, Lösungszeiten und SLA-Kennzahlen mit SQL, Python und Datenvisualisierung.",
+      "description": "Datenanalysesystem zur Überwachung von IT-Betriebsabläufen in Unternehmensumgebungen, einschließlich Incident-Volumen, Lösungszeiten und SLA-Kennzahlen mit SQL, Python und Datenvisualisierung.",
+      "state": "IN BEARBEITUNG",
       "demo": "",
       "repo": ""
     },
     {
-      "name": "KI-Copilot für technisches Wissensmanagement (RAG)",
+      "name": "KI-gestützter technischer Wissensassistent (RAG)",
       "type": "Künstliche Intelligenz",
-      "description": "KI-basiertes System zur Abfrage technischer Dokumentation mittels Retrieval-Augmented Generation (RAG), entwickelt zur Verbesserung des Wissenszugriffs und der operativen Effizienz in IT-Umgebungen.",
+      "description": "Intelligentes System zur Abfrage technischer Dokumentation mithilfe von Sprachmodellen und Retrieval-Augmented Generation (RAG), mit dem Ziel, den Wissenszugang und die operative Effizienz in IT-Umgebungen zu verbessern.",
       "demo": "",
       "repo": ""
     }
   ],
   "hero": {
-    "badge": "Remote · Hybrid · Vor Ort · Flexibel verfügbar",
-    "title": "Data Analyst mit Hintergrund in IT-Operations und Systemen",
-    "subtitle": "Analyse von IT-Operationen in Unternehmensumgebungen mit Fokus auf Incidents, SLA und Servicekennzahlen zur Verbesserung der operativen Effizienz. Erfahrung in Reporting, SQL-Abfragen und Automatisierung mit Python im Bereich Data Analytics und Business Intelligence.",
+    "badge": "100% remote, hybrid, vor Ort · Geografische und zeitliche Verfügbarkeit",
+    "title": "Data Analyst mit Hintergrund in IT-Betrieb & Systemen",
+    "subtitle": "Analyse von IT-Betriebsabläufen in Unternehmensumgebungen – mit Fokus auf Vorfälle, SLA und Servicekennzahlen zur Verbesserung der operativen Effizienz. Erfahrung in Reporting, SQL-Abfragen und einfacher Python-Automatisierung, mit aktivem Übergang in Data Analytics und Business Intelligence.",
     "tags": [
       "SQL & Reporting",
       "Power BI / Excel",
       "Python (pandas)",
       "Incident- & SLA-Analyse",
-      "IT-Unternehmensumgebungen"
+      "Unternehmens-IT-Umgebungen"
     ]
   },
   "stackLine": "SQL • Reporting • SLA • Power BI • Excel • Python",

@@ -40,7 +40,6 @@
       "items": [
         "FARO",
         "Escalado N2/N3",
-        "Odigo (calidad)",
         "PowerPoint"
       ]
     },
@@ -85,27 +84,26 @@
   ],
   "experience": [
     {
-      "position": "Técnico de Soporte Avanzado | Análisis de Datos Operativos",
-      "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
-      "period": "Dic 2024 – Actualidad",
+      "position": "BI & Data Analyst Freelancer",
+      "company": "Freelance / Proyecto profesional independiente",
+      "period": "2025 – Actualidad",
       "bullets": [
-        "Análisis de datos operativos de incidencias en entornos corporativos críticos (Comunidad de Madrid).",
-        "Monitorización y seguimiento de SLA, tiempos de resolución y volumen de tickets mediante reporting en Excel y Power BI.",
-        "Elaboración de informes mensuales y anuales de productividad para equipo de 12 agentes (~300 tickets diarios).",
-        "Identificación de patrones de incidencias y cuellos de botella operativos para optimizar procesos y tiempos de resolución.",
-        "Gestión de incidencias complejas, accesos y soporte técnico en entornos corporativos (VIP)."
+        "Desarrollo de dashboards e informes en Power BI para visualización de KPIs y métricas operativas en entornos IT.",
+        "Análisis de datos de ticketing e incidencias (+10.000 registros) mediante consultas SQL para identificar patrones, tendencias y cuellos de botella.",
+        "Limpieza, transformación y validación de datos con Python (pandas) a partir de fuentes en formato CSV y Excel.",
+        "Monitorización de SLA y tiempos de resolución mediante reporting periódico orientado a la toma de decisiones.",
+        "Automatización parcial de procesos de reporting para reducir tiempos de generación de informes operativos."
       ]
     },
     {
-      "position": "Coordinación Operativa y Análisis de Servicio (12 agentes)",
+      "position": "Técnico de Soporte Avanzado",
       "company": "Madrid Digital – AYESA ATECH SOLUTIONS",
-      "period": "2025 – Actualidad",
+      "period": "Dic 2024 – Actualidad",
       "bullets": [
-        "Coordinación operativa de equipo de 12 agentes: planificación, seguimiento y mejora del rendimiento.",
-        "Análisis de calidad del servicio mediante escucha de llamadas y evaluación de procesos.",
-        "Generación de informes y dashboards en Power BI para seguimiento de métricas operativas.",
-        "Análisis de grandes volúmenes de datos de ticketing (FARO, +10.000 registros) para reporting y comparativas.",
-        "Desarrollo de consultas SQL para optimizar el reporting y obtener indicadores clave del servicio."
+        "Soporte técnico avanzado en entornos corporativos críticos de la Comunidad de Madrid, con atención a usuarios VIP.",
+        "Gestión y resolución de incidencias complejas relacionadas con accesos, aplicaciones corporativas y herramientas internas.",
+        "Seguimiento del estado de incidencias y cumplimiento de SLA en plataforma de ticketing FARO.",
+        "Colaboración con equipos técnicos en la escalada y resolución de problemas de alta criticidad."
       ]
     },
     {
@@ -127,9 +125,7 @@
         "Gestión de dispositivos móviles y equipos RFID (maquetación, soporte y mantenimiento).",
         "Gestión de permisos y accesos en Azure y uso de herramienta de ticketing corporativa.",
         "Soporte de sistemas AS400 (entorno Tordera) y operativa asociada.",
-        "Coordinación con Inditex en túneles RFID y proyectos relacionados con alarmas de productos.",
-        "Asumí responsabilidades de organización y priorización por falta de personal y traspaso incompleto.",
-        "Coordinación y formación de nuevas incorporaciones cuando se amplió el equipo."
+        "Coordinación con Inditex en túneles RFID y proyectos relacionados con alarmas de productos."
       ]
     },
     {
@@ -146,38 +142,38 @@
   "brandName": "Martin-Milev.dev",
   "cvPdfLabel": "CV Martin Milev (PDF)",
   "location": "Madrid, España",
-  "role": "Data Analyst Junior | SQL · Python · Power BI ",
+  "role": "Data Analyst Junior | SQL · Python · Power BI",
   "links": {
     "email": "martin.milev.vene@gmail.com",
     "github": "https://github.com/MartinMilevVenelinova",
     "linkedin": "https://www.linkedin.com/in/martin-milev-venelinova-5733191b9/"
   },
   "projects": [
-  {
-    "name": "Sistema de gestión de perfil profesional (CMS + Netlify)",
-    "type": "Web / Portfolio",
-    "description": "Plataforma web para gestión de contenido profesional mediante estructura desacoplada (JSON + frontend), con panel de administración y despliegue automático. Diseñada como sistema escalable similar a un CMS ligero.",
-    "demo": "",
-    "repo": "https://github.com/MartinMilevVenelinova/cv-web"
-  },
-  {
-    "name": "Plataforma de análisis de operaciones IT y SLA",
-    "type": "Data Analytics",
-    "description": "Sistema de análisis de datos orientado a monitorizar operaciones IT en entornos corporativos, incluyendo volumen de incidencias, tiempos de resolución y métricas SLA mediante SQL, Python y visualización de datos.",
-    "state": "EN CURSO",
-    "demo": "",
-    "repo": ""
-  },
-  {
-    "name": "Copiloto de conocimiento técnico basado en IA (RAG)",
-    "type": "Inteligencia Artificial",
-    "description": "Sistema inteligente para consulta de documentación técnica mediante modelos de lenguaje y Retrieval-Augmented Generation (RAG), enfocado en mejorar el acceso a conocimiento y la eficiencia operativa en entornos IT.",
-    "demo": "",
-    "repo": ""
-  }
+    {
+      "name": "Sistema de gestión de perfil profesional (CMS + Netlify)",
+      "type": "Web / Portfolio",
+      "description": "Plataforma web para gestión de contenido profesional mediante estructura desacoplada (JSON + frontend), con panel de administración y despliegue automático. Diseñada como sistema escalable similar a un CMS ligero.",
+      "demo": "",
+      "repo": "https://github.com/MartinMilevVenelinova/cv-web"
+    },
+    {
+      "name": "Plataforma de análisis de operaciones IT y SLA",
+      "type": "Data Analytics",
+      "description": "Sistema de análisis de datos orientado a monitorizar operaciones IT en entornos corporativos, incluyendo volumen de incidencias, tiempos de resolución y métricas SLA mediante SQL, Python y visualización de datos.",
+      "state": "EN CURSO",
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "name": "Copiloto de conocimiento técnico basado en IA (RAG)",
+      "type": "Inteligencia Artificial",
+      "description": "Sistema inteligente para consulta de documentación técnica mediante modelos de lenguaje y Retrieval-Augmented Generation (RAG), enfocado en mejorar el acceso a conocimiento y la eficiencia operativa en entornos IT.",
+      "demo": "",
+      "repo": ""
+    }
   ],
   "hero": {
-    "badge": "100% remoto, hibrido, presencial ·  Disponibilidad geográfica y horaria",
+    "badge": "100% remoto, híbrido, presencial · Disponibilidad geográfica y horaria",
     "title": "Data Analyst con base en operaciones y sistemas IT",
     "subtitle": "Análisis de operaciones IT en entornos corporativos, trabajando con incidencias, SLA y métricas de servicio para mejorar la eficiencia operativa. Experiencia en reporting, consultas SQL y automatización básica con Python, con transición activa hacia Data Analytics y Business Intelligence.",
     "tags": [
